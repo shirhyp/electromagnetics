@@ -1,3 +1,9 @@
+---
+title: Course Description for EE3601 Transmission Lines, Fields, and Waves
+description: A detailed course description for EE3601 Transmission Lines, Fields, and Waves including overview, topics covered and learning objectives in the format of the 2001 Bloom Taxonomy
+quality_score: 68
+---
+
 # EE3601 — Transmission Lines, Fields, and Waves
 
 **Credits:** 3 (3 lecture hours per week)
