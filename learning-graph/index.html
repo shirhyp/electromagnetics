@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="An interactive intelligent textbook for junior electrical engineers that builds from transmission lines and the Smith chart to Maxwell's equations, plane waves, waveguides and antennas.">
+        <meta name="description" content="The learning graph for Transmission Lines, Fields, and Waves — 392 concepts connected by prerequisite relationships, with the reports used to build and check it">
       
       
         <meta name="author" content="Hye Yoon Park">
@@ -29,7 +29,7 @@
     
     
       
-        <title>Introduction - Transmission Lines, Fields, and Waves</title>
+        <title>Learning Graph - Transmission Lines, Fields, and Waves</title>
       
     
     
@@ -80,7 +80,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#learning-graph" class="md-skip">
+        <a href="#learning-graph-for-transmission-lines-fields-and-waves" class="md-skip">
           Skip to content
         </a>
       
@@ -116,7 +116,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Introduction
+              Learning Graph
             
           </span>
         </div>
@@ -388,6 +388,14 @@
       
         
       
+        
+      
+        
+      
+        
+      
+        
+      
     
     
     
@@ -454,6 +462,118 @@
     
   
     Course Description Assessment
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="concept-list/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Concept Enumeration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="quality-metrics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Graph Quality Analysis
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="concept-taxonomy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Concept Taxonomy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="taxonomy-distribution/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Taxonomy Distribution
   
 
     
@@ -602,6 +722,108 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#course-description" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Course Description
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#list-of-concepts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        List of Concepts
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#concept-dependency-list" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Concept Dependency List
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#analysis-and-documentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Analysis and Documentation
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Analysis and Documentation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#course-description-quality-assessment" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Course Description Quality Assessment
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#learning-graph-quality-validation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Learning Graph Quality Validation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#concept-taxonomy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Concept Taxonomy
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#taxonomy-distribution" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Taxonomy Distribution
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -673,27 +895,73 @@
   
 
 
-<h1 id="learning-graph">Learning Graph<a class="headerlink" href="#learning-graph" title="Permanent link">&para;</a></h1>
-<p>The learning graph captures how concepts in Transmission Lines, Fields, and Waves depend on each
-other. It is a Directed Acyclic Graph (DAG) — every concept has a path back to
-one or more foundational concepts that have no prerequisites.</p>
-<p>Once the <code>learning-graph-generator</code> skill runs, this section will be populated
-with:</p>
+<h1 id="learning-graph-for-transmission-lines-fields-and-waves">Learning Graph for Transmission Lines, Fields, and Waves<a class="headerlink" href="#learning-graph-for-transmission-lines-fields-and-waves" title="Permanent link">&para;</a></h1>
+<p>This section contains the learning graph for this textbook. A learning graph is
+a graph of the concepts used in the book. Each concept is a node in a network
+graph, and concepts are connected by directed edges that show which concepts a
+student needs to understand first.</p>
+<p>A learning graph is the foundational data structure for intelligent textbooks
+that can recommend learning paths. It works like a roadmap of concepts that
+helps students reach their learning goals.</p>
+<p>At one end of the graph are the foundational concepts, such as Complex Number,
+Voltage, Cartesian Coordinates and Electric Charge, which have no
+prerequisites. At the other end are the most advanced concepts in the course,
+such as stub matching, waveguide attenuation and the Friis transmission
+equation. To master an advanced concept you need to understand every concept it
+depends on.</p>
+<p>The graph for this book has <strong>392 concepts</strong> connected by <strong>726 dependency
+edges</strong>, grouped into <strong>14 categories</strong>.</p>
+<h2 id="course-description">Course Description<a class="headerlink" href="#course-description" title="Permanent link">&para;</a></h2>
+<p>The <a href="../course-description/">Course Description</a> is the source document for
+the concepts in this course. It uses the 2001 Bloom's Taxonomy to organize the
+learning outcomes.</p>
+<h2 id="list-of-concepts">List of Concepts<a class="headerlink" href="#list-of-concepts" title="Permanent link">&para;</a></h2>
+<p>Generative AI was used to turn the course description into a
+<a href="concept-list/">Concept List</a>. Each concept is a short Title Case label of
+at most 32 characters.</p>
+<h2 id="concept-dependency-list">Concept Dependency List<a class="headerlink" href="#concept-dependency-list" title="Permanent link">&para;</a></h2>
+<p>The concepts and their dependencies form a Directed Acyclic Graph (DAG): no
+concept depends, directly or indirectly, on itself. The DAG is available in two
+formats: a <a href="learning-graph.csv">CSV file</a> and a <a href="learning-graph.json">JSON file</a>
+in the vis-network JavaScript library format. The JSON file has <code>metadata</code>,
+<code>groups</code>, <code>nodes</code> and <code>edges</code> sections, and each edge has <code>from</code> and <code>to</code>
+properties, so the graph can be viewed and edited with vis-network tools.</p>
+<h2 id="analysis-and-documentation">Analysis and Documentation<a class="headerlink" href="#analysis-and-documentation" title="Permanent link">&para;</a></h2>
+<h3 id="course-description-quality-assessment">Course Description Quality Assessment<a class="headerlink" href="#course-description-quality-assessment" title="Permanent link">&para;</a></h3>
+<p>This report rates how well the course description supports learning graph
+generation. It checks the required fields, the depth of the topic list, and the
+learning outcomes at each Bloom's Taxonomy level.</p>
+<p><a href="course-description-assessment/">View the Course Description Quality Assessment</a></p>
+<h3 id="learning-graph-quality-validation">Learning Graph Quality Validation<a class="headerlink" href="#learning-graph-quality-validation" title="Permanent link">&para;</a></h3>
+<p>This report uses graph algorithms to check the structure of the learning graph:</p>
 <ul>
-<li><strong>Course Description Assessment</strong> — quality review of <code>course-description.md</code></li>
-<li><strong>Concept Enumeration</strong> — the ~200 concepts the book will cover</li>
-<li><strong>Concept Taxonomy</strong> — concepts grouped into 8–12 categories</li>
-<li><strong>Graph Quality Analysis</strong> — DAG structure, foundational and terminal nodes</li>
-<li><strong>Taxonomy Distribution</strong> — concept count per taxonomy category</li>
+<li>All 392 concepts are connected in a single graph</li>
+<li>The graph is a valid DAG with no cycles</li>
+<li>Eight foundational concepts serve as entry points</li>
+<li>Indegree distribution and the longest dependency chains</li>
 </ul>
-<p>Use the <code>book-installer</code> skill (option 23) to add an interactive graph viewer
-once <code>learning-graph.json</code> exists.</p>
+<p><a href="quality-metrics/">View the Learning Graph Quality Validation</a></p>
+<h3 id="concept-taxonomy">Concept Taxonomy<a class="headerlink" href="#concept-taxonomy" title="Permanent link">&para;</a></h3>
+<p>To make patterns in the graph visible, each concept is assigned to one of 14
+categories, and each category has its own color in the graph viewer. The
+categories run from mathematical and circuit foundations, through transmission
+lines and field theory, to plane waves, waveguides and antennas. Each has a
+3–5 letter TaxonomyID used in the CSV file.</p>
+<p><a href="concept-taxonomy/">View the Concept Taxonomy</a></p>
+<h3 id="taxonomy-distribution">Taxonomy Distribution<a class="headerlink" href="#taxonomy-distribution" title="Permanent link">&para;</a></h3>
+<p>This report shows how many concepts fall into each category. The goal is a
+roughly balanced taxonomy in which no category holds more than 30% of the
+concepts. In this book the largest category, Electrostatics, holds 12.2%.</p>
+<p><a href="taxonomy-distribution/">View the Taxonomy Distribution Report</a></p>
 
 
 
 
 
 
+
+  
+  
 
 
 

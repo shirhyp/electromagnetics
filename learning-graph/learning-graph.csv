@@ -1,0 +1,393 @@
+ConceptID,ConceptLabel,Dependencies,TaxonomyID
+1,Complex Number,,FOUND
+2,Complex Plane,1,FOUND
+3,Rectangular Form,2,FOUND
+4,Polar Form,2,FOUND
+5,Euler's Formula,4|3,FOUND
+6,Complex Conjugate,3,FOUND
+7,Sinusoidal Signal,,FOUND
+8,Amplitude,7,FOUND
+9,Frequency,7,FOUND
+10,Angular Frequency,9,FOUND
+11,Period,9,FOUND
+12,Phase Angle,7,FOUND
+13,Phasor,5|8|12,FOUND
+14,Phasor Transformation,13|10,FOUND
+15,Time-Harmonic Signal,14,FOUND
+16,Decibel,8,FOUND
+17,Neper,16,FOUND
+18,Voltage,,FOUND
+19,Current,,FOUND
+20,Ohm's Law,23,FOUND
+21,Kirchhoff's Voltage Law,18,FOUND
+22,Kirchhoff's Current Law,19,FOUND
+23,Resistance,18|19,FOUND
+24,Impedance,20|13,FOUND
+25,Reactance,24,FOUND
+26,Admittance,24,FOUND
+27,Susceptance,26,FOUND
+28,Lumped Element Model,21|22|24,FOUND
+29,Average Power,18|19|11,FOUND
+30,Complex Power,29|6|13,FOUND
+31,Thevenin Equivalent Circuit,28,FOUND
+32,Maximum Power Transfer,31|30,FOUND
+33,Partial Differential Equation,,FOUND
+34,Scalar Field,,VEC
+35,Vector Field,36|34,VEC
+36,Unit Vector,39,VEC
+37,Dot Product,36,VEC
+38,Cross Product,36,VEC
+39,Cartesian Coordinates,,VEC
+40,Cylindrical Coordinates,39,VEC
+41,Spherical Coordinates,39,VEC
+42,Coordinate Transformation,40|41|37,VEC
+43,Differential Length,39|40|41,VEC
+44,Differential Area,43|38,VEC
+45,Differential Volume,43,VEC
+46,Line Integral,43|37|35,VEC
+47,Surface Integral,44|37|35,VEC
+48,Volume Integral,45|34,VEC
+49,Del Operator,35|34|33,VEC
+50,Gradient,49,VEC
+51,Divergence,49|37,VEC
+52,Curl,49|38,VEC
+53,Laplacian,50|51,VEC
+54,Divergence Theorem,51|47|48,VEC
+55,Stokes's Theorem,52|46|47,VEC
+56,Conservative Field,46|50,VEC
+57,Solenoidal Field,51,VEC
+58,Irrotational Field,52|56,VEC
+59,Wave,7,WAVE
+60,Traveling Wave,59,WAVE
+61,Wave Equation,33|60,WAVE
+62,Forward Traveling Wave,60,WAVE
+63,Backward Traveling Wave,60,WAVE
+64,Wavelength,60|11,WAVE
+65,Phase Velocity,64|9,WAVE
+66,Phase Constant,64|10,WAVE
+67,Speed of Light,65,WAVE
+68,Propagation Delay,65,WAVE
+69,Superposition of Waves,62|63,WAVE
+70,Standing Wave,69,WAVE
+71,Rise Time,72,WAVE
+72,Signal Bandwidth,9,WAVE
+73,Electrical Length,64|68,WAVE
+74,Electrically Short Interconnect,73|71,WAVE
+75,Electrically Long Interconnect,73|71,WAVE
+76,Breakdown of Circuit Theory,75|28,WAVE
+77,Transmission Line,76|60,TLINE
+78,TEM Mode,77,TLINE
+79,Two-Wire Line,77,TLINE
+80,Coaxial Line,77,TLINE
+81,Parallel-Plate Line,77,TLINE
+82,Microstrip Line,77,TLINE
+83,Stripline,82,TLINE
+84,Coplanar Waveguide,82,TLINE
+85,Distributed Element Model,77|28,TLINE
+86,Per-Unit-Length Resistance,85|23,TLINE
+87,Per-Unit-Length Inductance,85,TLINE
+88,Per-Unit-Length Capacitance,85,TLINE
+89,Per-Unit-Length Conductance,85|26,TLINE
+90,Line Segment Equivalent Circuit,86|87|88|89,TLINE
+91,Telegrapher's Equations,90|21|22|33,TLINE
+92,Phasor Telegrapher's Equations,91|14,TLINE
+93,Line Wave Equation,92|61,TLINE
+94,Propagation Constant,93|66|1,TLINE
+95,Attenuation Constant,94,TLINE
+96,Characteristic Impedance,94|24,TLINE
+97,Lossless Line,96|95,TLINE
+98,Low-Loss Line,97,TLINE
+99,Distortionless Line,98,TLINE
+100,Conductor Loss,86|95|319,TLINE
+101,Dielectric Loss,89|95,TLINE
+102,Loss Tangent,101,TLINE
+103,Attenuation in Decibels,95|17|16,TLINE
+104,Effective Permittivity,82|230|65,TLINE
+105,Coaxial Line Impedance Formula,80|96|236|276,TLINE
+106,Microstrip Design Equations,104|96,TLINE
+107,Dispersion,65|94,TLINE
+108,Group Velocity,107,TLINE
+109,Signal Distortion,107|99,TLINE
+110,Load Impedance,24|77,TERM
+111,Source Impedance,31|77,TERM
+112,Terminated Line,110|96,TERM
+113,Normalized Impedance,96|110,TERM
+114,Normalized Admittance,113|26,TERM
+115,Voltage Reflection Coefficient,112|62|63,TERM
+116,Current Reflection Coefficient,115,TERM
+117,Matched Load,115,TERM
+118,Short-Circuit Termination,115,TERM
+119,Open-Circuit Termination,115,TERM
+120,Reactive Termination,115|25,TERM
+121,Standing Wave Pattern,115|70,TERM
+122,Voltage Maximum,121,TERM
+123,Voltage Minimum,121,TERM
+124,VSWR,122|123,TERM
+125,Return Loss,115|16,TERM
+126,Mismatch Loss,125|138,TERM
+127,Generalized Reflection Coeff,115|66,TERM
+128,Input Impedance,127|97,TERM
+129,Lossy Line Input Impedance,128|94,TERM
+130,Short-Circuited Stub,128|118,TERM
+131,Open-Circuited Stub,128|119,TERM
+132,Half-Wave Line,128,TERM
+133,Quarter-Wave Line,128,TERM
+134,Impedance Inversion,133,TERM
+135,Impedance Periodicity,132,TERM
+136,Incident Power,29|62|96,TERM
+137,Reflected Power,136|115,TERM
+138,Power Delivered to Load,136|137,TERM
+139,Power Flow on a Line,138|30,TERM
+140,Conjugate Matching,32|128|111,TERM
+141,Unknown Load Determination,124|123|128,TERM
+142,Smith Chart,113|115|2,SMITH
+143,Constant-Resistance Circle,142,SMITH
+144,Constant-Reactance Arc,142|25,SMITH
+145,Constant-VSWR Circle,142|124,SMITH
+146,Wavelengths Toward Generator,142|127,SMITH
+147,Wavelengths Toward Load,146,SMITH
+148,Smith Chart Rotation,146|145,SMITH
+149,Reading Impedance on the Chart,143|144,SMITH
+150,Graphical Input Impedance,148|149|128,SMITH
+151,Admittance Smith Chart,142|114,SMITH
+152,Impedance-Admittance Chart,151,SMITH
+153,Smith Chart Software Tool,150,SMITH
+154,Impedance Matching,117|140,SMITH
+155,Matching Network,154,SMITH
+156,Lumped-Element Matching,155|28,SMITH
+157,L-Section Matching Network,156|158|159|152,SMITH
+158,Series Reactive Element,25|142,SMITH
+159,Shunt Reactive Element,27|151,SMITH
+160,Single-Stub Matching,155|130|131,SMITH
+161,Shunt Stub,160|151,SMITH
+162,Series Stub,160,SMITH
+163,Stub Position,161|148,SMITH
+164,Stub Length,163|27,SMITH
+165,Quarter-Wave Transformer,155|134,SMITH
+166,Quality Factor,25|23,SMITH
+167,Matching Bandwidth,166|155,SMITH
+168,Matching Method Comparison,157|160|165|167,SMITH
+169,Transient Response,77|60,TRANS
+170,Step Response,169,TRANS
+171,Pulse Response,170,TRANS
+172,Transit Time,68|77,TRANS
+173,Initial Wave Amplitude,170|96|111,TRANS
+174,Source Reflection Coefficient,111|115,TRANS
+175,Multiple Reflections,174|115|172,TRANS
+176,Bounce Diagram,175|173,TRANS
+177,Voltage Bounce Diagram,176,TRANS
+178,Current Bounce Diagram,176|116,TRANS
+179,Steady-State Line Voltage,177,TRANS
+180,Capacitive Load Transient,170|120,TRANS
+181,Inductive Load Transient,170|120,TRANS
+182,Time-Domain Reflectometry,170|115,TRANS
+183,TDR Trace Interpretation,182|176,TRANS
+184,Fault Location,183|172,TRANS
+185,Discontinuity Identification,183|180|181,TRANS
+186,Signal Integrity,175|71,TRANS
+187,Ringing,186|176,TRANS
+188,Overshoot and Undershoot,187,TRANS
+189,High-Speed Digital Interconnect,186|75,TRANS
+190,PCB Trace,189|82,TRANS
+191,Critical Line Length,71|73|190,TRANS
+192,Termination Decision,191|186,TRANS
+193,Series Termination,192|174,TRANS
+194,Parallel Termination,192|117,TRANS
+195,Thevenin Termination,194|31,TRANS
+196,AC Termination,194|180,TRANS
+197,Reflection Budget,192|188,TRANS
+198,Electric Charge,,ESTAT
+199,Point Charge,198,ESTAT
+200,Line Charge Density,198|46,ESTAT
+201,Surface Charge Density,198|47,ESTAT
+202,Volume Charge Density,198|48,ESTAT
+203,Coulomb's Law,199|36,ESTAT
+204,Permittivity of Free Space,203,ESTAT
+205,Electric Field Intensity,203|35,ESTAT
+206,Superposition Principle,205,ESTAT
+207,Field of a Line Charge,206|200,ESTAT
+208,Field of a Charged Sheet,206|201,ESTAT
+209,Electric Flux,205|47,ESTAT
+210,Electric Flux Density,209|204,ESTAT
+211,Gauss's Law,210|202,ESTAT
+212,Gaussian Surface,211,ESTAT
+213,Symmetry in Field Problems,212|40|41,ESTAT
+214,Gauss's Law Differential Form,211|54,ESTAT
+215,Electric Potential,205|46,ESTAT
+216,Potential Difference,215|18,ESTAT
+217,Equipotential Surface,215,ESTAT
+218,Field as Potential Gradient,215|50|56,ESTAT
+219,Electric Dipole,199|206,ESTAT
+220,Electric Dipole Moment,219,ESTAT
+221,Conductor,198,ESTAT
+222,Conductivity,221,ESTAT
+223,Current Density,19|47,ESTAT
+224,Ohm's Law Point Form,223|222|205|20,ESTAT
+225,Continuity Equation,223|202|51,ESTAT
+226,Conductor in Static Field,221|205|217,ESTAT
+227,Dielectric Material,205,ESTAT
+228,Polarization of a Dielectric,227|220,ESTAT
+229,Bound Charge,228,ESTAT
+230,Relative Permittivity,228|204,ESTAT
+231,Dielectric Strength,227,ESTAT
+232,Linear Isotropic Medium,230,ESTAT
+233,Electrostatic Boundary Condition,211|56|226|230,ESTAT
+234,Capacitance,216|211|226,ESTAT
+235,Parallel-Plate Capacitor,234|208,ESTAT
+236,Coaxial Capacitor,234|213,ESTAT
+237,Electrostatic Energy,234|215,ESTAT
+238,Electric Energy Density,237|210,ESTAT
+239,Poisson's Equation,214|218|53,ESTAT
+240,Laplace's Equation,239,ESTAT
+241,Boundary Value Problem,240|233,ESTAT
+242,Uniqueness Theorem,241,ESTAT
+243,Method of Images,242|199,ESTAT
+244,Resistance from Field Theory,224|23|240,ESTAT
+245,2-D Field Solver,241|234,ESTAT
+246,Magnetic Flux Density,247,MSTAT
+247,Lorentz Force,205|38|199,MSTAT
+248,Permeability of Free Space,246,MSTAT
+249,Biot-Savart Law,250|248|38,MSTAT
+250,Current Element,19|43,MSTAT
+251,Field of a Straight Wire,249,MSTAT
+252,Field of a Current Loop,249,MSTAT
+253,Ampere's Circuital Law,255|46|19,MSTAT
+254,Amperian Loop,253|213,MSTAT
+255,Magnetic Field Intensity,246|248,MSTAT
+256,Field of a Solenoid,254,MSTAT
+257,Field of a Toroid,254,MSTAT
+258,Ampere's Law Differential Form,253|55|223,MSTAT
+259,Magnetic Flux,246|47,MSTAT
+260,Gauss's Law for Magnetism,259|57,MSTAT
+261,Magnetic Vector Potential,260|52,MSTAT
+262,Force on a Current-Carrying Wire,247|250,MSTAT
+263,Magnetic Torque,262|264,MSTAT
+264,Magnetic Dipole Moment,252,MSTAT
+265,Magnetization,264,MSTAT
+266,Relative Permeability,265|248,MSTAT
+267,Diamagnetic Material,266,MSTAT
+268,Paramagnetic Material,266,MSTAT
+269,Ferromagnetic Material,266,MSTAT
+270,Hysteresis,269,MSTAT
+271,Magnetic Boundary Conditions,260|253|266,MSTAT
+272,Flux Linkage,259,MSTAT
+273,Inductance,272|19,MSTAT
+274,Self-Inductance,273,MSTAT
+275,Mutual Inductance,273,MSTAT
+276,Coaxial Line Inductance,274|80|254,MSTAT
+277,Two-Wire Line Inductance,274|79|251,MSTAT
+278,Magnetic Energy,273,MSTAT
+279,Magnetic Energy Density,278|255,MSTAT
+280,Faraday's Law,259|281,MAXW
+281,Electromotive Force,46|205,MAXW
+282,Lenz's Law,280,MAXW
+283,Transformer EMF,280,MAXW
+284,Motional EMF,280|247,MAXW
+285,Ideal Transformer,283|275,MAXW
+286,Conduction Current,223|224,MAXW
+287,Displacement Current,253|225|234,MAXW
+288,Displacement Current Density,287|210,MAXW
+289,Maxwell's Equations,211|260|280|288|253,MAXW
+290,Integral Form of Maxwell's Eqs,289,MAXW
+291,Point Form of Maxwell's Eqs,289|214|258|55|54,MAXW
+292,Constitutive Relations,230|266|224,MAXW
+293,Meaning of Maxwell's Equations,290|291,MAXW
+294,Time-Harmonic Fields,291|15,MAXW
+295,Phasor Maxwell's Equations,294|292,MAXW
+296,Complex Permittivity,295|286,MAXW
+297,Lossy Medium,296,MAXW
+298,Perfect Electric Conductor,222|226,MAXW
+299,Time-Varying Boundary Conditions,233|271|289|298,MAXW
+300,Quasi-Static Approximation,289|73,MAXW
+301,Electromagnetic Spectrum,9|64|303,MAXW
+302,Circuit Theory as a Field Limit,300|21|76,MAXW
+303,Electromagnetic Wave,289|59,PLANE
+304,Vector Wave Equation,291|61|53,PLANE
+305,Helmholtz Equation,304|295,PLANE
+306,Uniform Plane Wave,305|303,PLANE
+307,TEM Wave,306|78,PLANE
+308,Intrinsic Impedance,306|24,PLANE
+309,Impedance of Free Space,308|204|248,PLANE
+310,Propagation Direction,306|38,PLANE
+311,Plane Wave in Lossless Medium,306|65|67,PLANE
+312,Plane Wave in Lossy Medium,311|297|94,PLANE
+313,Index of Refraction,311|230,PLANE
+314,Good Dielectric,312|102,PLANE
+315,Good Conductor,312|102,PLANE
+316,Low-Loss Approximation Validity,314|315|98,PLANE
+317,Plane Wave Attenuation,312|103,PLANE
+318,Skin Depth,315|317,PLANE
+319,Skin Effect,318,PLANE
+320,Surface Resistance,318|222,PLANE
+321,AC Resistance of a Wire,320|86,PLANE
+322,Dispersive Medium,312|107,PLANE
+323,Wave Polarization,306|13,PLANE
+324,Linear Polarization,323,PLANE
+325,Circular Polarization,323,PLANE
+326,Elliptical Polarization,324|325,PLANE
+327,Polarization Handedness,325|310,PLANE
+328,Poynting Vector,306|38|255,PLANE
+329,Poynting Theorem,328|238|279|54,PLANE
+330,Power Density,328,PLANE
+331,Time-Average Power Density,330|30|308,PLANE
+332,Electromagnetic Energy Density,238|279|306,PLANE
+333,Planar Boundary,299,REFL
+334,Normal Incidence,333|306,REFL
+335,Plane Wave Reflection Coeff,334|308,REFL
+336,Plane Wave Transmission Coeff,335,REFL
+337,Reflection from a Conductor,335|298,REFL
+338,Standing Wave in Free Space,337|70,REFL
+339,Wave Impedance,308|334,REFL
+340,Transmission Line Analogy,339|128|335,REFL
+341,Quarter-Wave Coating,340|165,REFL
+342,Oblique Incidence,334|310,REFL
+343,Plane of Incidence,342,REFL
+344,Angle of Incidence,342,REFL
+345,Snell's Law of Reflection,344,REFL
+346,Snell's Law of Refraction,344|313,REFL
+347,Perpendicular Polarization,343|324,REFL
+348,Parallel Polarization,343|324,REFL
+349,Fresnel Coefficients,347|348|346|335,REFL
+350,Reflectivity,349|331,REFL
+351,Transmissivity,350|336,REFL
+352,Critical Angle,346,REFL
+353,Total Internal Reflection,352,REFL
+354,Evanescent Wave,353,REFL
+355,Brewster Angle,349|348,REFL
+356,Waveguide,357,WGUID
+357,Guided Wave,306|299,WGUID
+358,Rectangular Waveguide,356|39,WGUID
+359,Waveguide Boundary Conditions,358|298,WGUID
+360,TE Mode,359|305,WGUID
+361,TM Mode,359|305,WGUID
+362,Mode Indices,360|361,WGUID
+363,Cutoff Frequency,362,WGUID
+364,Cutoff Wavelength,363|64,WGUID
+365,Dominant Mode,363,WGUID
+366,TE10 Mode,365|360,WGUID
+367,Guide Wavelength,363|64,WGUID
+368,Waveguide Phase Velocity,367|65,WGUID
+369,Waveguide Group Velocity,368|108,WGUID
+370,Waveguide Wave Impedance,360|361|339,WGUID
+371,Evanescent Mode,363|354,WGUID
+372,Single-Mode Operation,365|363,WGUID
+373,Waveguide Power Flow,366|331,WGUID
+374,Waveguide Attenuation,373|320,WGUID
+375,Coax vs Waveguide Comparison,374|372|80|78,WGUID
+376,Antenna,303|77,ANT
+377,Radiation,376|289,ANT
+378,Hertzian Dipole,377|250|41,ANT
+379,Near Field,378,ANT
+380,Far Field,378,ANT
+381,Radiation Pattern,380,ANT
+382,Radiation Intensity,380|331,ANT
+383,Radiated Power,382|47,ANT
+384,Radiation Resistance,383|23,ANT
+385,Directivity,382|383,ANT
+386,Antenna Efficiency,384,ANT
+387,Antenna Gain,385|386,ANT
+388,Beamwidth,381,ANT
+389,Half-Wave Dipole,378|384,ANT
+390,Antenna Reciprocity,387,ANT
+391,Effective Aperture,387|390,ANT
+392,Friis Transmission Equation,391|387|16,ANT

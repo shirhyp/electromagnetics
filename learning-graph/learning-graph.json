@@ -1,0 +1,5380 @@
+{
+  "metadata": {
+    "title": "Transmission Lines, Fields, and Waves",
+    "description": "A learning graph for EE3601, a junior-level undergraduate course that starts with transmission lines, impedance matching and transients and builds up through electrostatics, magnetostatics and Maxwell's equations to plane waves, reflection, waveguides and antennas.",
+    "creator": "Hye Yoon Park",
+    "date": "2026-11-02",
+    "version": "1.0",
+    "format": "Learning Graph JSON v1.0",
+    "schema": "https://raw.githubusercontent.com/dmccreary/learning-graphs/refs/heads/main/src/schema/learning-graph-schema.json",
+    "license": "CC BY-NC-SA 4.0 DEED"
+  },
+  "groups": {
+    "FOUND": {
+      "classifierName": "Math and Circuit Foundations",
+      "color": "SteelBlue",
+      "font": {
+        "color": "white"
+      }
+    },
+    "VEC": {
+      "classifierName": "Vector Analysis",
+      "color": "DarkSlateBlue",
+      "font": {
+        "color": "white"
+      }
+    },
+    "WAVE": {
+      "classifierName": "Wave Fundamentals",
+      "color": "Teal",
+      "font": {
+        "color": "white"
+      }
+    },
+    "TLINE": {
+      "classifierName": "Transmission Line Theory",
+      "color": "DarkGreen",
+      "font": {
+        "color": "white"
+      }
+    },
+    "TERM": {
+      "classifierName": "Terminated Transmission Lines",
+      "color": "LimeGreen",
+      "font": {
+        "color": "black"
+      }
+    },
+    "SMITH": {
+      "classifierName": "Smith Chart and Impedance Matching",
+      "color": "Gold",
+      "font": {
+        "color": "black"
+      }
+    },
+    "TRANS": {
+      "classifierName": "Transients and Signal Integrity",
+      "color": "DarkGoldenrod",
+      "font": {
+        "color": "white"
+      }
+    },
+    "ESTAT": {
+      "classifierName": "Electrostatics",
+      "color": "Crimson",
+      "font": {
+        "color": "white"
+      }
+    },
+    "MSTAT": {
+      "classifierName": "Magnetostatics",
+      "color": "DodgerBlue",
+      "font": {
+        "color": "white"
+      }
+    },
+    "MAXW": {
+      "classifierName": "Maxwell's Equations",
+      "color": "Indigo",
+      "font": {
+        "color": "white"
+      }
+    },
+    "PLANE": {
+      "classifierName": "Uniform Plane Waves",
+      "color": "MediumPurple",
+      "font": {
+        "color": "white"
+      }
+    },
+    "REFL": {
+      "classifierName": "Reflection and Transmission",
+      "color": "Orange",
+      "font": {
+        "color": "black"
+      }
+    },
+    "WGUID": {
+      "classifierName": "Waveguides",
+      "color": "SaddleBrown",
+      "font": {
+        "color": "white"
+      }
+    },
+    "ANT": {
+      "classifierName": "Antennas",
+      "color": "DeepPink",
+      "font": {
+        "color": "white"
+      }
+    }
+  },
+  "nodes": [
+    {
+      "id": 1,
+      "label": "Complex Number",
+      "group": "FOUND",
+      "shape": "box",
+      "cis": 12933
+    },
+    {
+      "id": 2,
+      "label": "Complex Plane",
+      "group": "FOUND",
+      "cis": 12485
+    },
+    {
+      "id": 3,
+      "label": "Rectangular Form",
+      "group": "FOUND",
+      "cis": 6252
+    },
+    {
+      "id": 4,
+      "label": "Polar Form",
+      "group": "FOUND",
+      "cis": 6197
+    },
+    {
+      "id": 5,
+      "label": "Euler's Formula",
+      "group": "FOUND",
+      "cis": 6196
+    },
+    {
+      "id": 6,
+      "label": "Complex Conjugate",
+      "group": "FOUND",
+      "cis": 55
+    },
+    {
+      "id": 7,
+      "label": "Sinusoidal Signal",
+      "group": "FOUND",
+      "shape": "box",
+      "cis": 32730
+    },
+    {
+      "id": 8,
+      "label": "Amplitude",
+      "group": "FOUND",
+      "cis": 6219
+    },
+    {
+      "id": 9,
+      "label": "Frequency",
+      "group": "FOUND",
+      "cis": 11268
+    },
+    {
+      "id": 10,
+      "label": "Angular Frequency",
+      "group": "FOUND",
+      "cis": 1269
+    },
+    {
+      "id": 11,
+      "label": "Period",
+      "group": "FOUND",
+      "cis": 5275
+    },
+    {
+      "id": 12,
+      "label": "Phase Angle",
+      "group": "FOUND",
+      "cis": 6196
+    },
+    {
+      "id": 13,
+      "label": "Phasor",
+      "group": "FOUND",
+      "cis": 6195
+    },
+    {
+      "id": 14,
+      "label": "Phasor Transformation",
+      "group": "FOUND",
+      "cis": 767
+    },
+    {
+      "id": 15,
+      "label": "Time-Harmonic Signal",
+      "group": "FOUND",
+      "cis": 317
+    },
+    {
+      "id": 16,
+      "label": "Decibel",
+      "group": "FOUND",
+      "cis": 23
+    },
+    {
+      "id": 17,
+      "label": "Neper",
+      "group": "FOUND",
+      "cis": 10
+    },
+    {
+      "id": 18,
+      "label": "Voltage",
+      "group": "FOUND",
+      "shape": "box",
+      "cis": 11906
+    },
+    {
+      "id": 19,
+      "label": "Current",
+      "group": "FOUND",
+      "shape": "box",
+      "cis": 16091
+    },
+    {
+      "id": 20,
+      "label": "Ohm's Law",
+      "group": "FOUND",
+      "cis": 5699
+    },
+    {
+      "id": 21,
+      "label": "Kirchhoff's Voltage Law",
+      "group": "FOUND",
+      "cis": 4638
+    },
+    {
+      "id": 22,
+      "label": "Kirchhoff's Current Law",
+      "group": "FOUND",
+      "cis": 4637
+    },
+    {
+      "id": 23,
+      "label": "Resistance",
+      "group": "FOUND",
+      "cis": 6168
+    },
+    {
+      "id": 24,
+      "label": "Impedance",
+      "group": "FOUND",
+      "cis": 5356
+    },
+    {
+      "id": 25,
+      "label": "Reactance",
+      "group": "FOUND",
+      "cis": 17
+    },
+    {
+      "id": 26,
+      "label": "Admittance",
+      "group": "FOUND",
+      "cis": 482
+    },
+    {
+      "id": 27,
+      "label": "Susceptance",
+      "group": "FOUND",
+      "cis": 5
+    },
+    {
+      "id": 28,
+      "label": "Lumped Element Model",
+      "group": "FOUND",
+      "cis": 4186
+    },
+    {
+      "id": 29,
+      "label": "Average Power",
+      "group": "FOUND",
+      "cis": 63
+    },
+    {
+      "id": 30,
+      "label": "Complex Power",
+      "group": "FOUND",
+      "cis": 54
+    },
+    {
+      "id": 31,
+      "label": "Thevenin Equivalent Circuit",
+      "group": "FOUND",
+      "cis": 81
+    },
+    {
+      "id": 32,
+      "label": "Maximum Power Transfer",
+      "group": "FOUND",
+      "cis": 18
+    },
+    {
+      "id": 33,
+      "label": "Partial Differential Equation",
+      "group": "FOUND",
+      "shape": "box",
+      "cis": 6500
+    },
+    {
+      "id": 34,
+      "label": "Scalar Field",
+      "group": "VEC",
+      "shape": "box",
+      "cis": 51689
+    },
+    {
+      "id": 35,
+      "label": "Vector Field",
+      "group": "VEC",
+      "cis": 41343
+    },
+    {
+      "id": 36,
+      "label": "Unit Vector",
+      "group": "VEC",
+      "cis": 106006
+    },
+    {
+      "id": 37,
+      "label": "Dot Product",
+      "group": "VEC",
+      "cis": 21534
+    },
+    {
+      "id": 38,
+      "label": "Cross Product",
+      "group": "VEC",
+      "cis": 20723
+    },
+    {
+      "id": 39,
+      "label": "Cartesian Coordinates",
+      "group": "VEC",
+      "shape": "box",
+      "cis": 176159
+    },
+    {
+      "id": 40,
+      "label": "Cylindrical Coordinates",
+      "group": "VEC",
+      "cis": 23362
+    },
+    {
+      "id": 41,
+      "label": "Spherical Coordinates",
+      "group": "VEC",
+      "cis": 23396
+    },
+    {
+      "id": 42,
+      "label": "Coordinate Transformation",
+      "group": "VEC",
+      "cis": 1
+    },
+    {
+      "id": 43,
+      "label": "Differential Length",
+      "group": "VEC",
+      "cis": 23352
+    },
+    {
+      "id": 44,
+      "label": "Differential Area",
+      "group": "VEC",
+      "cis": 10444
+    },
+    {
+      "id": 45,
+      "label": "Differential Volume",
+      "group": "VEC",
+      "cis": 5038
+    },
+    {
+      "id": 46,
+      "label": "Line Integral",
+      "group": "VEC",
+      "cis": 7417
+    },
+    {
+      "id": 47,
+      "label": "Surface Integral",
+      "group": "VEC",
+      "cis": 10443
+    },
+    {
+      "id": 48,
+      "label": "Volume Integral",
+      "group": "VEC",
+      "cis": 5037
+    },
+    {
+      "id": 49,
+      "label": "Del Operator",
+      "group": "VEC",
+      "cis": 5308
+    },
+    {
+      "id": 50,
+      "label": "Gradient",
+      "group": "VEC",
+      "cis": 410
+    },
+    {
+      "id": 51,
+      "label": "Divergence",
+      "group": "VEC",
+      "cis": 3672
+    },
+    {
+      "id": 52,
+      "label": "Curl",
+      "group": "VEC",
+      "cis": 1225
+    },
+    {
+      "id": 53,
+      "label": "Laplacian",
+      "group": "VEC",
+      "cis": 300
+    },
+    {
+      "id": 54,
+      "label": "Divergence Theorem",
+      "group": "VEC",
+      "cis": 1230
+    },
+    {
+      "id": 55,
+      "label": "Stokes's Theorem",
+      "group": "VEC",
+      "cis": 1222
+    },
+    {
+      "id": 56,
+      "label": "Conservative Field",
+      "group": "VEC",
+      "cis": 101
+    },
+    {
+      "id": 57,
+      "label": "Solenoidal Field",
+      "group": "VEC",
+      "cis": 1114
+    },
+    {
+      "id": 58,
+      "label": "Irrotational Field",
+      "group": "VEC",
+      "cis": 1
+    },
+    {
+      "id": 59,
+      "label": "Wave",
+      "group": "WAVE",
+      "cis": 9046
+    },
+    {
+      "id": 60,
+      "label": "Traveling Wave",
+      "group": "WAVE",
+      "cis": 8757
+    },
+    {
+      "id": 61,
+      "label": "Wave Equation",
+      "group": "WAVE",
+      "cis": 741
+    },
+    {
+      "id": 62,
+      "label": "Forward Traveling Wave",
+      "group": "WAVE",
+      "cis": 257
+    },
+    {
+      "id": 63,
+      "label": "Backward Traveling Wave",
+      "group": "WAVE",
+      "cis": 249
+    },
+    {
+      "id": 64,
+      "label": "Wavelength",
+      "group": "WAVE",
+      "cis": 5211
+    },
+    {
+      "id": 65,
+      "label": "Phase Velocity",
+      "group": "WAVE",
+      "cis": 2406
+    },
+    {
+      "id": 66,
+      "label": "Phase Constant",
+      "group": "WAVE",
+      "cis": 501
+    },
+    {
+      "id": 67,
+      "label": "Speed of Light",
+      "group": "WAVE",
+      "cis": 33
+    },
+    {
+      "id": 68,
+      "label": "Propagation Delay",
+      "group": "WAVE",
+      "cis": 2331
+    },
+    {
+      "id": 69,
+      "label": "Superposition of Waves",
+      "group": "WAVE",
+      "cis": 23
+    },
+    {
+      "id": 70,
+      "label": "Standing Wave",
+      "group": "WAVE",
+      "cis": 22
+    },
+    {
+      "id": 71,
+      "label": "Rise Time",
+      "group": "WAVE",
+      "cis": 2315
+    },
+    {
+      "id": 72,
+      "label": "Signal Bandwidth",
+      "group": "WAVE",
+      "cis": 2316
+    },
+    {
+      "id": 73,
+      "label": "Electrical Length",
+      "group": "WAVE",
+      "cis": 2298
+    },
+    {
+      "id": 74,
+      "label": "Electrically Short Interconnect",
+      "group": "WAVE",
+      "cis": 1
+    },
+    {
+      "id": 75,
+      "label": "Electrically Long Interconnect",
+      "group": "WAVE",
+      "cis": 2287
+    },
+    {
+      "id": 76,
+      "label": "Breakdown of Circuit Theory",
+      "group": "WAVE",
+      "cis": 2277
+    },
+    {
+      "id": 77,
+      "label": "Transmission Line",
+      "group": "TLINE",
+      "cis": 2275
+    },
+    {
+      "id": 78,
+      "label": "TEM Mode",
+      "group": "TLINE",
+      "cis": 3
+    },
+    {
+      "id": 79,
+      "label": "Two-Wire Line",
+      "group": "TLINE",
+      "cis": 2
+    },
+    {
+      "id": 80,
+      "label": "Coaxial Line",
+      "group": "TLINE",
+      "cis": 5
+    },
+    {
+      "id": 81,
+      "label": "Parallel-Plate Line",
+      "group": "TLINE",
+      "cis": 1
+    },
+    {
+      "id": 82,
+      "label": "Microstrip Line",
+      "group": "TLINE",
+      "cis": 13
+    },
+    {
+      "id": 83,
+      "label": "Stripline",
+      "group": "TLINE",
+      "cis": 1
+    },
+    {
+      "id": 84,
+      "label": "Coplanar Waveguide",
+      "group": "TLINE",
+      "cis": 1
+    },
+    {
+      "id": 85,
+      "label": "Distributed Element Model",
+      "group": "TLINE",
+      "cis": 1824
+    },
+    {
+      "id": 86,
+      "label": "Per-Unit-Length Resistance",
+      "group": "TLINE",
+      "cis": 454
+    },
+    {
+      "id": 87,
+      "label": "Per-Unit-Length Inductance",
+      "group": "TLINE",
+      "cis": 452
+    },
+    {
+      "id": 88,
+      "label": "Per-Unit-Length Capacitance",
+      "group": "TLINE",
+      "cis": 452
+    },
+    {
+      "id": 89,
+      "label": "Per-Unit-Length Conductance",
+      "group": "TLINE",
+      "cis": 465
+    },
+    {
+      "id": 90,
+      "label": "Line Segment Equivalent Circuit",
+      "group": "TLINE",
+      "cis": 451
+    },
+    {
+      "id": 91,
+      "label": "Telegrapher's Equations",
+      "group": "TLINE",
+      "cis": 450
+    },
+    {
+      "id": 92,
+      "label": "Phasor Telegrapher's Equations",
+      "group": "TLINE",
+      "cis": 449
+    },
+    {
+      "id": 93,
+      "label": "Line Wave Equation",
+      "group": "TLINE",
+      "cis": 448
+    },
+    {
+      "id": 94,
+      "label": "Propagation Constant",
+      "group": "TLINE",
+      "cis": 447
+    },
+    {
+      "id": 95,
+      "label": "Attenuation Constant",
+      "group": "TLINE",
+      "cis": 74
+    },
+    {
+      "id": 96,
+      "label": "Characteristic Impedance",
+      "group": "TLINE",
+      "cis": 345
+    },
+    {
+      "id": 97,
+      "label": "Lossless Line",
+      "group": "TLINE",
+      "cis": 50
+    },
+    {
+      "id": 98,
+      "label": "Low-Loss Line",
+      "group": "TLINE",
+      "cis": 4
+    },
+    {
+      "id": 99,
+      "label": "Distortionless Line",
+      "group": "TLINE",
+      "cis": 2
+    },
+    {
+      "id": 100,
+      "label": "Conductor Loss",
+      "group": "TLINE",
+      "cis": 1
+    },
+    {
+      "id": 101,
+      "label": "Dielectric Loss",
+      "group": "TLINE",
+      "cis": 13
+    },
+    {
+      "id": 102,
+      "label": "Loss Tangent",
+      "group": "TLINE",
+      "cis": 12
+    },
+    {
+      "id": 103,
+      "label": "Attenuation in Decibels",
+      "group": "TLINE",
+      "cis": 9
+    },
+    {
+      "id": 104,
+      "label": "Effective Permittivity",
+      "group": "TLINE",
+      "cis": 2
+    },
+    {
+      "id": 105,
+      "label": "Coaxial Line Impedance Formula",
+      "group": "TLINE",
+      "cis": 1
+    },
+    {
+      "id": 106,
+      "label": "Microstrip Design Equations",
+      "group": "TLINE",
+      "cis": 1
+    },
+    {
+      "id": 107,
+      "label": "Dispersion",
+      "group": "TLINE",
+      "cis": 5
+    },
+    {
+      "id": 108,
+      "label": "Group Velocity",
+      "group": "TLINE",
+      "cis": 2
+    },
+    {
+      "id": 109,
+      "label": "Signal Distortion",
+      "group": "TLINE",
+      "cis": 1
+    },
+    {
+      "id": 110,
+      "label": "Load Impedance",
+      "group": "TERM",
+      "cis": 274
+    },
+    {
+      "id": 111,
+      "label": "Source Impedance",
+      "group": "TERM",
+      "cis": 61
+    },
+    {
+      "id": 112,
+      "label": "Terminated Line",
+      "group": "TERM",
+      "cis": 226
+    },
+    {
+      "id": 113,
+      "label": "Normalized Impedance",
+      "group": "TERM",
+      "cis": 47
+    },
+    {
+      "id": 114,
+      "label": "Normalized Admittance",
+      "group": "TERM",
+      "cis": 11
+    },
+    {
+      "id": 115,
+      "label": "Voltage Reflection Coefficient",
+      "group": "TERM",
+      "cis": 225
+    },
+    {
+      "id": 116,
+      "label": "Current Reflection Coefficient",
+      "group": "TERM",
+      "cis": 2
+    },
+    {
+      "id": 117,
+      "label": "Matched Load",
+      "group": "TERM",
+      "cis": 20
+    },
+    {
+      "id": 118,
+      "label": "Short-Circuit Termination",
+      "group": "TERM",
+      "cis": 8
+    },
+    {
+      "id": 119,
+      "label": "Open-Circuit Termination",
+      "group": "TERM",
+      "cis": 8
+    },
+    {
+      "id": 120,
+      "label": "Reactive Termination",
+      "group": "TERM",
+      "cis": 6
+    },
+    {
+      "id": 121,
+      "label": "Standing Wave Pattern",
+      "group": "TERM",
+      "cis": 20
+    },
+    {
+      "id": 122,
+      "label": "Voltage Maximum",
+      "group": "TERM",
+      "cis": 9
+    },
+    {
+      "id": 123,
+      "label": "Voltage Minimum",
+      "group": "TERM",
+      "cis": 10
+    },
+    {
+      "id": 124,
+      "label": "VSWR",
+      "group": "TERM",
+      "cis": 8
+    },
+    {
+      "id": 125,
+      "label": "Return Loss",
+      "group": "TERM",
+      "cis": 2
+    },
+    {
+      "id": 126,
+      "label": "Mismatch Loss",
+      "group": "TERM",
+      "cis": 1
+    },
+    {
+      "id": 127,
+      "label": "Generalized Reflection Coeff",
+      "group": "TERM",
+      "cis": 53
+    },
+    {
+      "id": 128,
+      "label": "Input Impedance",
+      "group": "TERM",
+      "cis": 45
+    },
+    {
+      "id": 129,
+      "label": "Lossy Line Input Impedance",
+      "group": "TERM",
+      "cis": 1
+    },
+    {
+      "id": 130,
+      "label": "Short-Circuited Stub",
+      "group": "TERM",
+      "cis": 7
+    },
+    {
+      "id": 131,
+      "label": "Open-Circuited Stub",
+      "group": "TERM",
+      "cis": 7
+    },
+    {
+      "id": 132,
+      "label": "Half-Wave Line",
+      "group": "TERM",
+      "cis": 2
+    },
+    {
+      "id": 133,
+      "label": "Quarter-Wave Line",
+      "group": "TERM",
+      "cis": 5
+    },
+    {
+      "id": 134,
+      "label": "Impedance Inversion",
+      "group": "TERM",
+      "cis": 4
+    },
+    {
+      "id": 135,
+      "label": "Impedance Periodicity",
+      "group": "TERM",
+      "cis": 1
+    },
+    {
+      "id": 136,
+      "label": "Incident Power",
+      "group": "TERM",
+      "cis": 8
+    },
+    {
+      "id": 137,
+      "label": "Reflected Power",
+      "group": "TERM",
+      "cis": 4
+    },
+    {
+      "id": 138,
+      "label": "Power Delivered to Load",
+      "group": "TERM",
+      "cis": 3
+    },
+    {
+      "id": 139,
+      "label": "Power Flow on a Line",
+      "group": "TERM",
+      "cis": 1
+    },
+    {
+      "id": 140,
+      "label": "Conjugate Matching",
+      "group": "TERM",
+      "cis": 17
+    },
+    {
+      "id": 141,
+      "label": "Unknown Load Determination",
+      "group": "TERM",
+      "cis": 1
+    },
+    {
+      "id": 142,
+      "label": "Smith Chart",
+      "group": "SMITH",
+      "cis": 35
+    },
+    {
+      "id": 143,
+      "label": "Constant-Resistance Circle",
+      "group": "SMITH",
+      "cis": 4
+    },
+    {
+      "id": 144,
+      "label": "Constant-Reactance Arc",
+      "group": "SMITH",
+      "cis": 4
+    },
+    {
+      "id": 145,
+      "label": "Constant-VSWR Circle",
+      "group": "SMITH",
+      "cis": 6
+    },
+    {
+      "id": 146,
+      "label": "Wavelengths Toward Generator",
+      "group": "SMITH",
+      "cis": 7
+    },
+    {
+      "id": 147,
+      "label": "Wavelengths Toward Load",
+      "group": "SMITH",
+      "cis": 1
+    },
+    {
+      "id": 148,
+      "label": "Smith Chart Rotation",
+      "group": "SMITH",
+      "cis": 5
+    },
+    {
+      "id": 149,
+      "label": "Reading Impedance on the Chart",
+      "group": "SMITH",
+      "cis": 3
+    },
+    {
+      "id": 150,
+      "label": "Graphical Input Impedance",
+      "group": "SMITH",
+      "cis": 2
+    },
+    {
+      "id": 151,
+      "label": "Admittance Smith Chart",
+      "group": "SMITH",
+      "cis": 10
+    },
+    {
+      "id": 152,
+      "label": "Impedance-Admittance Chart",
+      "group": "SMITH",
+      "cis": 3
+    },
+    {
+      "id": 153,
+      "label": "Smith Chart Software Tool",
+      "group": "SMITH",
+      "cis": 1
+    },
+    {
+      "id": 154,
+      "label": "Impedance Matching",
+      "group": "SMITH",
+      "cis": 16
+    },
+    {
+      "id": 155,
+      "label": "Matching Network",
+      "group": "SMITH",
+      "cis": 15
+    },
+    {
+      "id": 156,
+      "label": "Lumped-Element Matching",
+      "group": "SMITH",
+      "cis": 3
+    },
+    {
+      "id": 157,
+      "label": "L-Section Matching Network",
+      "group": "SMITH",
+      "cis": 2
+    },
+    {
+      "id": 158,
+      "label": "Series Reactive Element",
+      "group": "SMITH",
+      "cis": 3
+    },
+    {
+      "id": 159,
+      "label": "Shunt Reactive Element",
+      "group": "SMITH",
+      "cis": 3
+    },
+    {
+      "id": 160,
+      "label": "Single-Stub Matching",
+      "group": "SMITH",
+      "cis": 6
+    },
+    {
+      "id": 161,
+      "label": "Shunt Stub",
+      "group": "SMITH",
+      "cis": 3
+    },
+    {
+      "id": 162,
+      "label": "Series Stub",
+      "group": "SMITH",
+      "cis": 1
+    },
+    {
+      "id": 163,
+      "label": "Stub Position",
+      "group": "SMITH",
+      "cis": 2
+    },
+    {
+      "id": 164,
+      "label": "Stub Length",
+      "group": "SMITH",
+      "cis": 1
+    },
+    {
+      "id": 165,
+      "label": "Quarter-Wave Transformer",
+      "group": "SMITH",
+      "cis": 3
+    },
+    {
+      "id": 166,
+      "label": "Quality Factor",
+      "group": "SMITH",
+      "cis": 3
+    },
+    {
+      "id": 167,
+      "label": "Matching Bandwidth",
+      "group": "SMITH",
+      "cis": 2
+    },
+    {
+      "id": 168,
+      "label": "Matching Method Comparison",
+      "group": "SMITH",
+      "cis": 1
+    },
+    {
+      "id": 169,
+      "label": "Transient Response",
+      "group": "TRANS",
+      "cis": 23
+    },
+    {
+      "id": 170,
+      "label": "Step Response",
+      "group": "TRANS",
+      "cis": 22
+    },
+    {
+      "id": 171,
+      "label": "Pulse Response",
+      "group": "TRANS",
+      "cis": 1
+    },
+    {
+      "id": 172,
+      "label": "Transit Time",
+      "group": "TRANS",
+      "cis": 32
+    },
+    {
+      "id": 173,
+      "label": "Initial Wave Amplitude",
+      "group": "TRANS",
+      "cis": 11
+    },
+    {
+      "id": 174,
+      "label": "Source Reflection Coefficient",
+      "group": "TRANS",
+      "cis": 32
+    },
+    {
+      "id": 175,
+      "label": "Multiple Reflections",
+      "group": "TRANS",
+      "cis": 30
+    },
+    {
+      "id": 176,
+      "label": "Bounce Diagram",
+      "group": "TRANS",
+      "cis": 10
+    },
+    {
+      "id": 177,
+      "label": "Voltage Bounce Diagram",
+      "group": "TRANS",
+      "cis": 2
+    },
+    {
+      "id": 178,
+      "label": "Current Bounce Diagram",
+      "group": "TRANS",
+      "cis": 1
+    },
+    {
+      "id": 179,
+      "label": "Steady-State Line Voltage",
+      "group": "TRANS",
+      "cis": 1
+    },
+    {
+      "id": 180,
+      "label": "Capacitive Load Transient",
+      "group": "TRANS",
+      "cis": 3
+    },
+    {
+      "id": 181,
+      "label": "Inductive Load Transient",
+      "group": "TRANS",
+      "cis": 2
+    },
+    {
+      "id": 182,
+      "label": "Time-Domain Reflectometry",
+      "group": "TRANS",
+      "cis": 4
+    },
+    {
+      "id": 183,
+      "label": "TDR Trace Interpretation",
+      "group": "TRANS",
+      "cis": 3
+    },
+    {
+      "id": 184,
+      "label": "Fault Location",
+      "group": "TRANS",
+      "cis": 1
+    },
+    {
+      "id": 185,
+      "label": "Discontinuity Identification",
+      "group": "TRANS",
+      "cis": 1
+    },
+    {
+      "id": 186,
+      "label": "Signal Integrity",
+      "group": "TRANS",
+      "cis": 19
+    },
+    {
+      "id": 187,
+      "label": "Ringing",
+      "group": "TRANS",
+      "cis": 3
+    },
+    {
+      "id": 188,
+      "label": "Overshoot and Undershoot",
+      "group": "TRANS",
+      "cis": 2
+    },
+    {
+      "id": 189,
+      "label": "High-Speed Digital Interconnect",
+      "group": "TRANS",
+      "cis": 9
+    },
+    {
+      "id": 190,
+      "label": "PCB Trace",
+      "group": "TRANS",
+      "cis": 8
+    },
+    {
+      "id": 191,
+      "label": "Critical Line Length",
+      "group": "TRANS",
+      "cis": 7
+    },
+    {
+      "id": 192,
+      "label": "Termination Decision",
+      "group": "TRANS",
+      "cis": 6
+    },
+    {
+      "id": 193,
+      "label": "Series Termination",
+      "group": "TRANS",
+      "cis": 1
+    },
+    {
+      "id": 194,
+      "label": "Parallel Termination",
+      "group": "TRANS",
+      "cis": 3
+    },
+    {
+      "id": 195,
+      "label": "Thevenin Termination",
+      "group": "TRANS",
+      "cis": 1
+    },
+    {
+      "id": 196,
+      "label": "AC Termination",
+      "group": "TRANS",
+      "cis": 1
+    },
+    {
+      "id": 197,
+      "label": "Reflection Budget",
+      "group": "TRANS",
+      "cis": 1
+    },
+    {
+      "id": 198,
+      "label": "Electric Charge",
+      "group": "ESTAT",
+      "shape": "box",
+      "cis": 36954
+    },
+    {
+      "id": 199,
+      "label": "Point Charge",
+      "group": "ESTAT",
+      "cis": 31407
+    },
+    {
+      "id": 200,
+      "label": "Line Charge Density",
+      "group": "ESTAT",
+      "cis": 2
+    },
+    {
+      "id": 201,
+      "label": "Surface Charge Density",
+      "group": "ESTAT",
+      "cis": 3
+    },
+    {
+      "id": 202,
+      "label": "Volume Charge Density",
+      "group": "ESTAT",
+      "cis": 3806
+    },
+    {
+      "id": 203,
+      "label": "Coulomb's Law",
+      "group": "ESTAT",
+      "cis": 22405
+    },
+    {
+      "id": 204,
+      "label": "Permittivity of Free Space",
+      "group": "ESTAT",
+      "cis": 4230
+    },
+    {
+      "id": 205,
+      "label": "Electric Field Intensity",
+      "group": "ESTAT",
+      "cis": 18174
+    },
+    {
+      "id": 206,
+      "label": "Superposition Principle",
+      "group": "ESTAT",
+      "cis": 429
+    },
+    {
+      "id": 207,
+      "label": "Field of a Line Charge",
+      "group": "ESTAT",
+      "cis": 1
+    },
+    {
+      "id": 208,
+      "label": "Field of a Charged Sheet",
+      "group": "ESTAT",
+      "cis": 2
+    },
+    {
+      "id": 209,
+      "label": "Electric Flux",
+      "group": "ESTAT",
+      "cis": 3808
+    },
+    {
+      "id": 210,
+      "label": "Electric Flux Density",
+      "group": "ESTAT",
+      "cis": 3807
+    },
+    {
+      "id": 211,
+      "label": "Gauss's Law",
+      "group": "ESTAT",
+      "cis": 2778
+    },
+    {
+      "id": 212,
+      "label": "Gaussian Surface",
+      "group": "ESTAT",
+      "cis": 9
+    },
+    {
+      "id": 213,
+      "label": "Symmetry in Field Problems",
+      "group": "ESTAT",
+      "cis": 8
+    },
+    {
+      "id": 214,
+      "label": "Gauss's Law Differential Form",
+      "group": "ESTAT",
+      "cis": 618
+    },
+    {
+      "id": 215,
+      "label": "Electric Potential",
+      "group": "ESTAT",
+      "cis": 2307
+    },
+    {
+      "id": 216,
+      "label": "Potential Difference",
+      "group": "ESTAT",
+      "cis": 1036
+    },
+    {
+      "id": 217,
+      "label": "Equipotential Surface",
+      "group": "ESTAT",
+      "cis": 1258
+    },
+    {
+      "id": 218,
+      "label": "Field as Potential Gradient",
+      "group": "ESTAT",
+      "cis": 8
+    },
+    {
+      "id": 219,
+      "label": "Electric Dipole",
+      "group": "ESTAT",
+      "cis": 425
+    },
+    {
+      "id": 220,
+      "label": "Electric Dipole Moment",
+      "group": "ESTAT",
+      "cis": 424
+    },
+    {
+      "id": 221,
+      "label": "Conductor",
+      "group": "ESTAT",
+      "cis": 1735
+    },
+    {
+      "id": 222,
+      "label": "Conductivity",
+      "group": "ESTAT",
+      "cis": 477
+    },
+    {
+      "id": 223,
+      "label": "Current Density",
+      "group": "ESTAT",
+      "cis": 2005
+    },
+    {
+      "id": 224,
+      "label": "Ohm's Law Point Form",
+      "group": "ESTAT",
+      "cis": 342
+    },
+    {
+      "id": 225,
+      "label": "Continuity Equation",
+      "group": "ESTAT",
+      "cis": 1027
+    },
+    {
+      "id": 226,
+      "label": "Conductor in Static Field",
+      "group": "ESTAT",
+      "cis": 1257
+    },
+    {
+      "id": 227,
+      "label": "Dielectric Material",
+      "group": "ESTAT",
+      "cis": 425
+    },
+    {
+      "id": 228,
+      "label": "Polarization of a Dielectric",
+      "group": "ESTAT",
+      "cis": 423
+    },
+    {
+      "id": 229,
+      "label": "Bound Charge",
+      "group": "ESTAT",
+      "cis": 1
+    },
+    {
+      "id": 230,
+      "label": "Relative Permittivity",
+      "group": "ESTAT",
+      "cis": 421
+    },
+    {
+      "id": 231,
+      "label": "Dielectric Strength",
+      "group": "ESTAT",
+      "cis": 1
+    },
+    {
+      "id": 232,
+      "label": "Linear Isotropic Medium",
+      "group": "ESTAT",
+      "cis": 1
+    },
+    {
+      "id": 233,
+      "label": "Electrostatic Boundary Condition",
+      "group": "ESTAT",
+      "cis": 91
+    },
+    {
+      "id": 234,
+      "label": "Capacitance",
+      "group": "ESTAT",
+      "cis": 1035
+    },
+    {
+      "id": 235,
+      "label": "Parallel-Plate Capacitor",
+      "group": "ESTAT",
+      "cis": 1
+    },
+    {
+      "id": 236,
+      "label": "Coaxial Capacitor",
+      "group": "ESTAT",
+      "cis": 2
+    },
+    {
+      "id": 237,
+      "label": "Electrostatic Energy",
+      "group": "ESTAT",
+      "cis": 4
+    },
+    {
+      "id": 238,
+      "label": "Electric Energy Density",
+      "group": "ESTAT",
+      "cis": 3
+    },
+    {
+      "id": 239,
+      "label": "Poisson's Equation",
+      "group": "ESTAT",
+      "cis": 7
+    },
+    {
+      "id": 240,
+      "label": "Laplace's Equation",
+      "group": "ESTAT",
+      "cis": 6
+    },
+    {
+      "id": 241,
+      "label": "Boundary Value Problem",
+      "group": "ESTAT",
+      "cis": 4
+    },
+    {
+      "id": 242,
+      "label": "Uniqueness Theorem",
+      "group": "ESTAT",
+      "cis": 2
+    },
+    {
+      "id": 243,
+      "label": "Method of Images",
+      "group": "ESTAT",
+      "cis": 1
+    },
+    {
+      "id": 244,
+      "label": "Resistance from Field Theory",
+      "group": "ESTAT",
+      "cis": 1
+    },
+    {
+      "id": 245,
+      "label": "2-D Field Solver",
+      "group": "ESTAT",
+      "cis": 1
+    },
+    {
+      "id": 246,
+      "label": "Magnetic Flux Density",
+      "group": "MSTAT",
+      "cis": 8571
+    },
+    {
+      "id": 247,
+      "label": "Lorentz Force",
+      "group": "MSTAT",
+      "cis": 8575
+    },
+    {
+      "id": 248,
+      "label": "Permeability of Free Space",
+      "group": "MSTAT",
+      "cis": 3620
+    },
+    {
+      "id": 249,
+      "label": "Biot-Savart Law",
+      "group": "MSTAT",
+      "cis": 415
+    },
+    {
+      "id": 250,
+      "label": "Current Element",
+      "group": "MSTAT",
+      "cis": 452
+    },
+    {
+      "id": 251,
+      "label": "Field of a Straight Wire",
+      "group": "MSTAT",
+      "cis": 2
+    },
+    {
+      "id": 252,
+      "label": "Field of a Current Loop",
+      "group": "MSTAT",
+      "cis": 412
+    },
+    {
+      "id": 253,
+      "label": "Ampere's Circuital Law",
+      "group": "MSTAT",
+      "cis": 2754
+    },
+    {
+      "id": 254,
+      "label": "Amperian Loop",
+      "group": "MSTAT",
+      "cis": 5
+    },
+    {
+      "id": 255,
+      "label": "Magnetic Field Intensity",
+      "group": "MSTAT",
+      "cis": 2795
+    },
+    {
+      "id": 256,
+      "label": "Field of a Solenoid",
+      "group": "MSTAT",
+      "cis": 1
+    },
+    {
+      "id": 257,
+      "label": "Field of a Toroid",
+      "group": "MSTAT",
+      "cis": 1
+    },
+    {
+      "id": 258,
+      "label": "Ampere's Law Differential Form",
+      "group": "MSTAT",
+      "cis": 611
+    },
+    {
+      "id": 259,
+      "label": "Magnetic Flux",
+      "group": "MSTAT",
+      "cis": 2155
+    },
+    {
+      "id": 260,
+      "label": "Gauss's Law for Magnetism",
+      "group": "MSTAT",
+      "cis": 1113
+    },
+    {
+      "id": 261,
+      "label": "Magnetic Vector Potential",
+      "group": "MSTAT",
+      "cis": 1
+    },
+    {
+      "id": 262,
+      "label": "Force on a Current-Carrying Wire",
+      "group": "MSTAT",
+      "cis": 2
+    },
+    {
+      "id": 263,
+      "label": "Magnetic Torque",
+      "group": "MSTAT",
+      "cis": 1
+    },
+    {
+      "id": 264,
+      "label": "Magnetic Dipole Moment",
+      "group": "MSTAT",
+      "cis": 411
+    },
+    {
+      "id": 265,
+      "label": "Magnetization",
+      "group": "MSTAT",
+      "cis": 409
+    },
+    {
+      "id": 266,
+      "label": "Relative Permeability",
+      "group": "MSTAT",
+      "cis": 408
+    },
+    {
+      "id": 267,
+      "label": "Diamagnetic Material",
+      "group": "MSTAT",
+      "cis": 1
+    },
+    {
+      "id": 268,
+      "label": "Paramagnetic Material",
+      "group": "MSTAT",
+      "cis": 1
+    },
+    {
+      "id": 269,
+      "label": "Ferromagnetic Material",
+      "group": "MSTAT",
+      "cis": 2
+    },
+    {
+      "id": 270,
+      "label": "Hysteresis",
+      "group": "MSTAT",
+      "cis": 1
+    },
+    {
+      "id": 271,
+      "label": "Magnetic Boundary Conditions",
+      "group": "MSTAT",
+      "cis": 87
+    },
+    {
+      "id": 272,
+      "label": "Flux Linkage",
+      "group": "MSTAT",
+      "cis": 12
+    },
+    {
+      "id": 273,
+      "label": "Inductance",
+      "group": "MSTAT",
+      "cis": 11
+    },
+    {
+      "id": 274,
+      "label": "Self-Inductance",
+      "group": "MSTAT",
+      "cis": 4
+    },
+    {
+      "id": 275,
+      "label": "Mutual Inductance",
+      "group": "MSTAT",
+      "cis": 2
+    },
+    {
+      "id": 276,
+      "label": "Coaxial Line Inductance",
+      "group": "MSTAT",
+      "cis": 2
+    },
+    {
+      "id": 277,
+      "label": "Two-Wire Line Inductance",
+      "group": "MSTAT",
+      "cis": 1
+    },
+    {
+      "id": 278,
+      "label": "Magnetic Energy",
+      "group": "MSTAT",
+      "cis": 4
+    },
+    {
+      "id": 279,
+      "label": "Magnetic Energy Density",
+      "group": "MSTAT",
+      "cis": 3
+    },
+    {
+      "id": 280,
+      "label": "Faraday's Law",
+      "group": "MAXW",
+      "cis": 1029
+    },
+    {
+      "id": 281,
+      "label": "Electromotive Force",
+      "group": "MAXW",
+      "cis": 1030
+    },
+    {
+      "id": 282,
+      "label": "Lenz's Law",
+      "group": "MAXW",
+      "cis": 1
+    },
+    {
+      "id": 283,
+      "label": "Transformer EMF",
+      "group": "MAXW",
+      "cis": 2
+    },
+    {
+      "id": 284,
+      "label": "Motional EMF",
+      "group": "MAXW",
+      "cis": 1
+    },
+    {
+      "id": 285,
+      "label": "Ideal Transformer",
+      "group": "MAXW",
+      "cis": 1
+    },
+    {
+      "id": 286,
+      "label": "Conduction Current",
+      "group": "MAXW",
+      "cis": 24
+    },
+    {
+      "id": 287,
+      "label": "Displacement Current",
+      "group": "MAXW",
+      "cis": 1026
+    },
+    {
+      "id": 288,
+      "label": "Displacement Current Density",
+      "group": "MAXW",
+      "cis": 1025
+    },
+    {
+      "id": 289,
+      "label": "Maxwell's Equations",
+      "group": "MAXW",
+      "cis": 1024
+    },
+    {
+      "id": 290,
+      "label": "Integral Form of Maxwell's Eqs",
+      "group": "MAXW",
+      "cis": 2
+    },
+    {
+      "id": 291,
+      "label": "Point Form of Maxwell's Eqs",
+      "group": "MAXW",
+      "cis": 610
+    },
+    {
+      "id": 292,
+      "label": "Constitutive Relations",
+      "group": "MAXW",
+      "cis": 316
+    },
+    {
+      "id": 293,
+      "label": "Meaning of Maxwell's Equations",
+      "group": "MAXW",
+      "cis": 1
+    },
+    {
+      "id": 294,
+      "label": "Time-Harmonic Fields",
+      "group": "MAXW",
+      "cis": 316
+    },
+    {
+      "id": 295,
+      "label": "Phasor Maxwell's Equations",
+      "group": "MAXW",
+      "cis": 315
+    },
+    {
+      "id": 296,
+      "label": "Complex Permittivity",
+      "group": "MAXW",
+      "cis": 23
+    },
+    {
+      "id": 297,
+      "label": "Lossy Medium",
+      "group": "MAXW",
+      "cis": 22
+    },
+    {
+      "id": 298,
+      "label": "Perfect Electric Conductor",
+      "group": "MAXW",
+      "cis": 130
+    },
+    {
+      "id": 299,
+      "label": "Time-Varying Boundary Conditions",
+      "group": "MAXW",
+      "cis": 86
+    },
+    {
+      "id": 300,
+      "label": "Quasi-Static Approximation",
+      "group": "MAXW",
+      "cis": 2
+    },
+    {
+      "id": 301,
+      "label": "Electromagnetic Spectrum",
+      "group": "MAXW",
+      "cis": 1
+    },
+    {
+      "id": 302,
+      "label": "Circuit Theory as a Field Limit",
+      "group": "MAXW",
+      "cis": 1
+    },
+    {
+      "id": 303,
+      "label": "Electromagnetic Wave",
+      "group": "PLANE",
+      "cis": 288
+    },
+    {
+      "id": 304,
+      "label": "Vector Wave Equation",
+      "group": "PLANE",
+      "cis": 292
+    },
+    {
+      "id": 305,
+      "label": "Helmholtz Equation",
+      "group": "PLANE",
+      "cis": 291
+    },
+    {
+      "id": 306,
+      "label": "Uniform Plane Wave",
+      "group": "PLANE",
+      "cis": 250
+    },
+    {
+      "id": 307,
+      "label": "TEM Wave",
+      "group": "PLANE",
+      "cis": 1
+    },
+    {
+      "id": 308,
+      "label": "Intrinsic Impedance",
+      "group": "PLANE",
+      "cis": 51
+    },
+    {
+      "id": 309,
+      "label": "Impedance of Free Space",
+      "group": "PLANE",
+      "cis": 1
+    },
+    {
+      "id": 310,
+      "label": "Propagation Direction",
+      "group": "PLANE",
+      "cis": 26
+    },
+    {
+      "id": 311,
+      "label": "Plane Wave in Lossless Medium",
+      "group": "PLANE",
+      "cis": 32
+    },
+    {
+      "id": 312,
+      "label": "Plane Wave in Lossy Medium",
+      "group": "PLANE",
+      "cis": 21
+    },
+    {
+      "id": 313,
+      "label": "Index of Refraction",
+      "group": "PLANE",
+      "cis": 10
+    },
+    {
+      "id": 314,
+      "label": "Good Dielectric",
+      "group": "PLANE",
+      "cis": 2
+    },
+    {
+      "id": 315,
+      "label": "Good Conductor",
+      "group": "PLANE",
+      "cis": 9
+    },
+    {
+      "id": 316,
+      "label": "Low-Loss Approximation Validity",
+      "group": "PLANE",
+      "cis": 1
+    },
+    {
+      "id": 317,
+      "label": "Plane Wave Attenuation",
+      "group": "PLANE",
+      "cis": 8
+    },
+    {
+      "id": 318,
+      "label": "Skin Depth",
+      "group": "PLANE",
+      "cis": 7
+    },
+    {
+      "id": 319,
+      "label": "Skin Effect",
+      "group": "PLANE",
+      "cis": 2
+    },
+    {
+      "id": 320,
+      "label": "Surface Resistance",
+      "group": "PLANE",
+      "cis": 4
+    },
+    {
+      "id": 321,
+      "label": "AC Resistance of a Wire",
+      "group": "PLANE",
+      "cis": 1
+    },
+    {
+      "id": 322,
+      "label": "Dispersive Medium",
+      "group": "PLANE",
+      "cis": 1
+    },
+    {
+      "id": 323,
+      "label": "Wave Polarization",
+      "group": "PLANE",
+      "cis": 17
+    },
+    {
+      "id": 324,
+      "label": "Linear Polarization",
+      "group": "PLANE",
+      "cis": 13
+    },
+    {
+      "id": 325,
+      "label": "Circular Polarization",
+      "group": "PLANE",
+      "cis": 3
+    },
+    {
+      "id": 326,
+      "label": "Elliptical Polarization",
+      "group": "PLANE",
+      "cis": 1
+    },
+    {
+      "id": 327,
+      "label": "Polarization Handedness",
+      "group": "PLANE",
+      "cis": 1
+    },
+    {
+      "id": 328,
+      "label": "Poynting Vector",
+      "group": "PLANE",
+      "cis": 37
+    },
+    {
+      "id": 329,
+      "label": "Poynting Theorem",
+      "group": "PLANE",
+      "cis": 1
+    },
+    {
+      "id": 330,
+      "label": "Power Density",
+      "group": "PLANE",
+      "cis": 35
+    },
+    {
+      "id": 331,
+      "label": "Time-Average Power Density",
+      "group": "PLANE",
+      "cis": 34
+    },
+    {
+      "id": 332,
+      "label": "Electromagnetic Energy Density",
+      "group": "PLANE",
+      "cis": 1
+    },
+    {
+      "id": 333,
+      "label": "Planar Boundary",
+      "group": "REFL",
+      "cis": 41
+    },
+    {
+      "id": 334,
+      "label": "Normal Incidence",
+      "group": "REFL",
+      "cis": 40
+    },
+    {
+      "id": 335,
+      "label": "Plane Wave Reflection Coeff",
+      "group": "REFL",
+      "cis": 11
+    },
+    {
+      "id": 336,
+      "label": "Plane Wave Transmission Coeff",
+      "group": "REFL",
+      "cis": 2
+    },
+    {
+      "id": 337,
+      "label": "Reflection from a Conductor",
+      "group": "REFL",
+      "cis": 2
+    },
+    {
+      "id": 338,
+      "label": "Standing Wave in Free Space",
+      "group": "REFL",
+      "cis": 1
+    },
+    {
+      "id": 339,
+      "label": "Wave Impedance",
+      "group": "REFL",
+      "cis": 4
+    },
+    {
+      "id": 340,
+      "label": "Transmission Line Analogy",
+      "group": "REFL",
+      "cis": 2
+    },
+    {
+      "id": 341,
+      "label": "Quarter-Wave Coating",
+      "group": "REFL",
+      "cis": 1
+    },
+    {
+      "id": 342,
+      "label": "Oblique Incidence",
+      "group": "REFL",
+      "cis": 24
+    },
+    {
+      "id": 343,
+      "label": "Plane of Incidence",
+      "group": "REFL",
+      "cis": 12
+    },
+    {
+      "id": 344,
+      "label": "Angle of Incidence",
+      "group": "REFL",
+      "cis": 11
+    },
+    {
+      "id": 345,
+      "label": "Snell's Law of Reflection",
+      "group": "REFL",
+      "cis": 1
+    },
+    {
+      "id": 346,
+      "label": "Snell's Law of Refraction",
+      "group": "REFL",
+      "cis": 9
+    },
+    {
+      "id": 347,
+      "label": "Perpendicular Polarization",
+      "group": "REFL",
+      "cis": 5
+    },
+    {
+      "id": 348,
+      "label": "Parallel Polarization",
+      "group": "REFL",
+      "cis": 6
+    },
+    {
+      "id": 349,
+      "label": "Fresnel Coefficients",
+      "group": "REFL",
+      "cis": 4
+    },
+    {
+      "id": 350,
+      "label": "Reflectivity",
+      "group": "REFL",
+      "cis": 2
+    },
+    {
+      "id": 351,
+      "label": "Transmissivity",
+      "group": "REFL",
+      "cis": 1
+    },
+    {
+      "id": 352,
+      "label": "Critical Angle",
+      "group": "REFL",
+      "cis": 4
+    },
+    {
+      "id": 353,
+      "label": "Total Internal Reflection",
+      "group": "REFL",
+      "cis": 3
+    },
+    {
+      "id": 354,
+      "label": "Evanescent Wave",
+      "group": "REFL",
+      "cis": 2
+    },
+    {
+      "id": 355,
+      "label": "Brewster Angle",
+      "group": "REFL",
+      "cis": 1
+    },
+    {
+      "id": 356,
+      "label": "Waveguide",
+      "group": "WGUID",
+      "cis": 43
+    },
+    {
+      "id": 357,
+      "label": "Guided Wave",
+      "group": "WGUID",
+      "cis": 44
+    },
+    {
+      "id": 358,
+      "label": "Rectangular Waveguide",
+      "group": "WGUID",
+      "cis": 42
+    },
+    {
+      "id": 359,
+      "label": "Waveguide Boundary Conditions",
+      "group": "WGUID",
+      "cis": 41
+    },
+    {
+      "id": 360,
+      "label": "TE Mode",
+      "group": "WGUID",
+      "cis": 22
+    },
+    {
+      "id": 361,
+      "label": "TM Mode",
+      "group": "WGUID",
+      "cis": 18
+    },
+    {
+      "id": 362,
+      "label": "Mode Indices",
+      "group": "WGUID",
+      "cis": 16
+    },
+    {
+      "id": 363,
+      "label": "Cutoff Frequency",
+      "group": "WGUID",
+      "cis": 15
+    },
+    {
+      "id": 364,
+      "label": "Cutoff Wavelength",
+      "group": "WGUID",
+      "cis": 1
+    },
+    {
+      "id": 365,
+      "label": "Dominant Mode",
+      "group": "WGUID",
+      "cis": 7
+    },
+    {
+      "id": 366,
+      "label": "TE10 Mode",
+      "group": "WGUID",
+      "cis": 4
+    },
+    {
+      "id": 367,
+      "label": "Guide Wavelength",
+      "group": "WGUID",
+      "cis": 3
+    },
+    {
+      "id": 368,
+      "label": "Waveguide Phase Velocity",
+      "group": "WGUID",
+      "cis": 2
+    },
+    {
+      "id": 369,
+      "label": "Waveguide Group Velocity",
+      "group": "WGUID",
+      "cis": 1
+    },
+    {
+      "id": 370,
+      "label": "Waveguide Wave Impedance",
+      "group": "WGUID",
+      "cis": 1
+    },
+    {
+      "id": 371,
+      "label": "Evanescent Mode",
+      "group": "WGUID",
+      "cis": 1
+    },
+    {
+      "id": 372,
+      "label": "Single-Mode Operation",
+      "group": "WGUID",
+      "cis": 2
+    },
+    {
+      "id": 373,
+      "label": "Waveguide Power Flow",
+      "group": "WGUID",
+      "cis": 3
+    },
+    {
+      "id": 374,
+      "label": "Waveguide Attenuation",
+      "group": "WGUID",
+      "cis": 2
+    },
+    {
+      "id": 375,
+      "label": "Coax vs Waveguide Comparison",
+      "group": "WGUID",
+      "cis": 1
+    },
+    {
+      "id": 376,
+      "label": "Antenna",
+      "group": "ANT",
+      "cis": 36
+    },
+    {
+      "id": 377,
+      "label": "Radiation",
+      "group": "ANT",
+      "cis": 35
+    },
+    {
+      "id": 378,
+      "label": "Hertzian Dipole",
+      "group": "ANT",
+      "cis": 34
+    },
+    {
+      "id": 379,
+      "label": "Near Field",
+      "group": "ANT",
+      "cis": 1
+    },
+    {
+      "id": 380,
+      "label": "Far Field",
+      "group": "ANT",
+      "cis": 31
+    },
+    {
+      "id": 381,
+      "label": "Radiation Pattern",
+      "group": "ANT",
+      "cis": 2
+    },
+    {
+      "id": 382,
+      "label": "Radiation Intensity",
+      "group": "ANT",
+      "cis": 28
+    },
+    {
+      "id": 383,
+      "label": "Radiated Power",
+      "group": "ANT",
+      "cis": 19
+    },
+    {
+      "id": 384,
+      "label": "Radiation Resistance",
+      "group": "ANT",
+      "cis": 10
+    },
+    {
+      "id": 385,
+      "label": "Directivity",
+      "group": "ANT",
+      "cis": 8
+    },
+    {
+      "id": 386,
+      "label": "Antenna Efficiency",
+      "group": "ANT",
+      "cis": 8
+    },
+    {
+      "id": 387,
+      "label": "Antenna Gain",
+      "group": "ANT",
+      "cis": 7
+    },
+    {
+      "id": 388,
+      "label": "Beamwidth",
+      "group": "ANT",
+      "cis": 1
+    },
+    {
+      "id": 389,
+      "label": "Half-Wave Dipole",
+      "group": "ANT",
+      "cis": 1
+    },
+    {
+      "id": 390,
+      "label": "Antenna Reciprocity",
+      "group": "ANT",
+      "cis": 3
+    },
+    {
+      "id": 391,
+      "label": "Effective Aperture",
+      "group": "ANT",
+      "cis": 2
+    },
+    {
+      "id": 392,
+      "label": "Friis Transmission Equation",
+      "group": "ANT",
+      "cis": 1
+    }
+  ],
+  "edges": [
+    {
+      "from": 2,
+      "to": 1
+    },
+    {
+      "from": 3,
+      "to": 2
+    },
+    {
+      "from": 4,
+      "to": 2
+    },
+    {
+      "from": 5,
+      "to": 4
+    },
+    {
+      "from": 5,
+      "to": 3
+    },
+    {
+      "from": 6,
+      "to": 3
+    },
+    {
+      "from": 8,
+      "to": 7
+    },
+    {
+      "from": 9,
+      "to": 7
+    },
+    {
+      "from": 10,
+      "to": 9
+    },
+    {
+      "from": 11,
+      "to": 9
+    },
+    {
+      "from": 12,
+      "to": 7
+    },
+    {
+      "from": 13,
+      "to": 5
+    },
+    {
+      "from": 13,
+      "to": 8
+    },
+    {
+      "from": 13,
+      "to": 12
+    },
+    {
+      "from": 14,
+      "to": 13
+    },
+    {
+      "from": 14,
+      "to": 10
+    },
+    {
+      "from": 15,
+      "to": 14
+    },
+    {
+      "from": 16,
+      "to": 8
+    },
+    {
+      "from": 17,
+      "to": 16
+    },
+    {
+      "from": 20,
+      "to": 23
+    },
+    {
+      "from": 21,
+      "to": 18
+    },
+    {
+      "from": 22,
+      "to": 19
+    },
+    {
+      "from": 23,
+      "to": 18
+    },
+    {
+      "from": 23,
+      "to": 19
+    },
+    {
+      "from": 24,
+      "to": 20
+    },
+    {
+      "from": 24,
+      "to": 13
+    },
+    {
+      "from": 25,
+      "to": 24
+    },
+    {
+      "from": 26,
+      "to": 24
+    },
+    {
+      "from": 27,
+      "to": 26
+    },
+    {
+      "from": 28,
+      "to": 21
+    },
+    {
+      "from": 28,
+      "to": 22
+    },
+    {
+      "from": 28,
+      "to": 24
+    },
+    {
+      "from": 29,
+      "to": 18
+    },
+    {
+      "from": 29,
+      "to": 19
+    },
+    {
+      "from": 29,
+      "to": 11
+    },
+    {
+      "from": 30,
+      "to": 29
+    },
+    {
+      "from": 30,
+      "to": 6
+    },
+    {
+      "from": 30,
+      "to": 13
+    },
+    {
+      "from": 31,
+      "to": 28
+    },
+    {
+      "from": 32,
+      "to": 31
+    },
+    {
+      "from": 32,
+      "to": 30
+    },
+    {
+      "from": 35,
+      "to": 36
+    },
+    {
+      "from": 35,
+      "to": 34
+    },
+    {
+      "from": 36,
+      "to": 39
+    },
+    {
+      "from": 37,
+      "to": 36
+    },
+    {
+      "from": 38,
+      "to": 36
+    },
+    {
+      "from": 40,
+      "to": 39
+    },
+    {
+      "from": 41,
+      "to": 39
+    },
+    {
+      "from": 42,
+      "to": 40
+    },
+    {
+      "from": 42,
+      "to": 41
+    },
+    {
+      "from": 42,
+      "to": 37
+    },
+    {
+      "from": 43,
+      "to": 39
+    },
+    {
+      "from": 43,
+      "to": 40
+    },
+    {
+      "from": 43,
+      "to": 41
+    },
+    {
+      "from": 44,
+      "to": 43
+    },
+    {
+      "from": 44,
+      "to": 38
+    },
+    {
+      "from": 45,
+      "to": 43
+    },
+    {
+      "from": 46,
+      "to": 43
+    },
+    {
+      "from": 46,
+      "to": 37
+    },
+    {
+      "from": 46,
+      "to": 35
+    },
+    {
+      "from": 47,
+      "to": 44
+    },
+    {
+      "from": 47,
+      "to": 37
+    },
+    {
+      "from": 47,
+      "to": 35
+    },
+    {
+      "from": 48,
+      "to": 45
+    },
+    {
+      "from": 48,
+      "to": 34
+    },
+    {
+      "from": 49,
+      "to": 35
+    },
+    {
+      "from": 49,
+      "to": 34
+    },
+    {
+      "from": 49,
+      "to": 33
+    },
+    {
+      "from": 50,
+      "to": 49
+    },
+    {
+      "from": 51,
+      "to": 49
+    },
+    {
+      "from": 51,
+      "to": 37
+    },
+    {
+      "from": 52,
+      "to": 49
+    },
+    {
+      "from": 52,
+      "to": 38
+    },
+    {
+      "from": 53,
+      "to": 50
+    },
+    {
+      "from": 53,
+      "to": 51
+    },
+    {
+      "from": 54,
+      "to": 51
+    },
+    {
+      "from": 54,
+      "to": 47
+    },
+    {
+      "from": 54,
+      "to": 48
+    },
+    {
+      "from": 55,
+      "to": 52
+    },
+    {
+      "from": 55,
+      "to": 46
+    },
+    {
+      "from": 55,
+      "to": 47
+    },
+    {
+      "from": 56,
+      "to": 46
+    },
+    {
+      "from": 56,
+      "to": 50
+    },
+    {
+      "from": 57,
+      "to": 51
+    },
+    {
+      "from": 58,
+      "to": 52
+    },
+    {
+      "from": 58,
+      "to": 56
+    },
+    {
+      "from": 59,
+      "to": 7
+    },
+    {
+      "from": 60,
+      "to": 59
+    },
+    {
+      "from": 61,
+      "to": 33
+    },
+    {
+      "from": 61,
+      "to": 60
+    },
+    {
+      "from": 62,
+      "to": 60
+    },
+    {
+      "from": 63,
+      "to": 60
+    },
+    {
+      "from": 64,
+      "to": 60
+    },
+    {
+      "from": 64,
+      "to": 11
+    },
+    {
+      "from": 65,
+      "to": 64
+    },
+    {
+      "from": 65,
+      "to": 9
+    },
+    {
+      "from": 66,
+      "to": 64
+    },
+    {
+      "from": 66,
+      "to": 10
+    },
+    {
+      "from": 67,
+      "to": 65
+    },
+    {
+      "from": 68,
+      "to": 65
+    },
+    {
+      "from": 69,
+      "to": 62
+    },
+    {
+      "from": 69,
+      "to": 63
+    },
+    {
+      "from": 70,
+      "to": 69
+    },
+    {
+      "from": 71,
+      "to": 72
+    },
+    {
+      "from": 72,
+      "to": 9
+    },
+    {
+      "from": 73,
+      "to": 64
+    },
+    {
+      "from": 73,
+      "to": 68
+    },
+    {
+      "from": 74,
+      "to": 73
+    },
+    {
+      "from": 74,
+      "to": 71
+    },
+    {
+      "from": 75,
+      "to": 73
+    },
+    {
+      "from": 75,
+      "to": 71
+    },
+    {
+      "from": 76,
+      "to": 75
+    },
+    {
+      "from": 76,
+      "to": 28
+    },
+    {
+      "from": 77,
+      "to": 76
+    },
+    {
+      "from": 77,
+      "to": 60
+    },
+    {
+      "from": 78,
+      "to": 77
+    },
+    {
+      "from": 79,
+      "to": 77
+    },
+    {
+      "from": 80,
+      "to": 77
+    },
+    {
+      "from": 81,
+      "to": 77
+    },
+    {
+      "from": 82,
+      "to": 77
+    },
+    {
+      "from": 83,
+      "to": 82
+    },
+    {
+      "from": 84,
+      "to": 82
+    },
+    {
+      "from": 85,
+      "to": 77
+    },
+    {
+      "from": 85,
+      "to": 28
+    },
+    {
+      "from": 86,
+      "to": 85
+    },
+    {
+      "from": 86,
+      "to": 23
+    },
+    {
+      "from": 87,
+      "to": 85
+    },
+    {
+      "from": 88,
+      "to": 85
+    },
+    {
+      "from": 89,
+      "to": 85
+    },
+    {
+      "from": 89,
+      "to": 26
+    },
+    {
+      "from": 90,
+      "to": 86
+    },
+    {
+      "from": 90,
+      "to": 87
+    },
+    {
+      "from": 90,
+      "to": 88
+    },
+    {
+      "from": 90,
+      "to": 89
+    },
+    {
+      "from": 91,
+      "to": 90
+    },
+    {
+      "from": 91,
+      "to": 21
+    },
+    {
+      "from": 91,
+      "to": 22
+    },
+    {
+      "from": 91,
+      "to": 33
+    },
+    {
+      "from": 92,
+      "to": 91
+    },
+    {
+      "from": 92,
+      "to": 14
+    },
+    {
+      "from": 93,
+      "to": 92
+    },
+    {
+      "from": 93,
+      "to": 61
+    },
+    {
+      "from": 94,
+      "to": 93
+    },
+    {
+      "from": 94,
+      "to": 66
+    },
+    {
+      "from": 94,
+      "to": 1
+    },
+    {
+      "from": 95,
+      "to": 94
+    },
+    {
+      "from": 96,
+      "to": 94
+    },
+    {
+      "from": 96,
+      "to": 24
+    },
+    {
+      "from": 97,
+      "to": 96
+    },
+    {
+      "from": 97,
+      "to": 95
+    },
+    {
+      "from": 98,
+      "to": 97
+    },
+    {
+      "from": 99,
+      "to": 98
+    },
+    {
+      "from": 100,
+      "to": 86
+    },
+    {
+      "from": 100,
+      "to": 95
+    },
+    {
+      "from": 100,
+      "to": 319
+    },
+    {
+      "from": 101,
+      "to": 89
+    },
+    {
+      "from": 101,
+      "to": 95
+    },
+    {
+      "from": 102,
+      "to": 101
+    },
+    {
+      "from": 103,
+      "to": 95
+    },
+    {
+      "from": 103,
+      "to": 17
+    },
+    {
+      "from": 103,
+      "to": 16
+    },
+    {
+      "from": 104,
+      "to": 82
+    },
+    {
+      "from": 104,
+      "to": 230
+    },
+    {
+      "from": 104,
+      "to": 65
+    },
+    {
+      "from": 105,
+      "to": 80
+    },
+    {
+      "from": 105,
+      "to": 96
+    },
+    {
+      "from": 105,
+      "to": 236
+    },
+    {
+      "from": 105,
+      "to": 276
+    },
+    {
+      "from": 106,
+      "to": 104
+    },
+    {
+      "from": 106,
+      "to": 96
+    },
+    {
+      "from": 107,
+      "to": 65
+    },
+    {
+      "from": 107,
+      "to": 94
+    },
+    {
+      "from": 108,
+      "to": 107
+    },
+    {
+      "from": 109,
+      "to": 107
+    },
+    {
+      "from": 109,
+      "to": 99
+    },
+    {
+      "from": 110,
+      "to": 24
+    },
+    {
+      "from": 110,
+      "to": 77
+    },
+    {
+      "from": 111,
+      "to": 31
+    },
+    {
+      "from": 111,
+      "to": 77
+    },
+    {
+      "from": 112,
+      "to": 110
+    },
+    {
+      "from": 112,
+      "to": 96
+    },
+    {
+      "from": 113,
+      "to": 96
+    },
+    {
+      "from": 113,
+      "to": 110
+    },
+    {
+      "from": 114,
+      "to": 113
+    },
+    {
+      "from": 114,
+      "to": 26
+    },
+    {
+      "from": 115,
+      "to": 112
+    },
+    {
+      "from": 115,
+      "to": 62
+    },
+    {
+      "from": 115,
+      "to": 63
+    },
+    {
+      "from": 116,
+      "to": 115
+    },
+    {
+      "from": 117,
+      "to": 115
+    },
+    {
+      "from": 118,
+      "to": 115
+    },
+    {
+      "from": 119,
+      "to": 115
+    },
+    {
+      "from": 120,
+      "to": 115
+    },
+    {
+      "from": 120,
+      "to": 25
+    },
+    {
+      "from": 121,
+      "to": 115
+    },
+    {
+      "from": 121,
+      "to": 70
+    },
+    {
+      "from": 122,
+      "to": 121
+    },
+    {
+      "from": 123,
+      "to": 121
+    },
+    {
+      "from": 124,
+      "to": 122
+    },
+    {
+      "from": 124,
+      "to": 123
+    },
+    {
+      "from": 125,
+      "to": 115
+    },
+    {
+      "from": 125,
+      "to": 16
+    },
+    {
+      "from": 126,
+      "to": 125
+    },
+    {
+      "from": 126,
+      "to": 138
+    },
+    {
+      "from": 127,
+      "to": 115
+    },
+    {
+      "from": 127,
+      "to": 66
+    },
+    {
+      "from": 128,
+      "to": 127
+    },
+    {
+      "from": 128,
+      "to": 97
+    },
+    {
+      "from": 129,
+      "to": 128
+    },
+    {
+      "from": 129,
+      "to": 94
+    },
+    {
+      "from": 130,
+      "to": 128
+    },
+    {
+      "from": 130,
+      "to": 118
+    },
+    {
+      "from": 131,
+      "to": 128
+    },
+    {
+      "from": 131,
+      "to": 119
+    },
+    {
+      "from": 132,
+      "to": 128
+    },
+    {
+      "from": 133,
+      "to": 128
+    },
+    {
+      "from": 134,
+      "to": 133
+    },
+    {
+      "from": 135,
+      "to": 132
+    },
+    {
+      "from": 136,
+      "to": 29
+    },
+    {
+      "from": 136,
+      "to": 62
+    },
+    {
+      "from": 136,
+      "to": 96
+    },
+    {
+      "from": 137,
+      "to": 136
+    },
+    {
+      "from": 137,
+      "to": 115
+    },
+    {
+      "from": 138,
+      "to": 136
+    },
+    {
+      "from": 138,
+      "to": 137
+    },
+    {
+      "from": 139,
+      "to": 138
+    },
+    {
+      "from": 139,
+      "to": 30
+    },
+    {
+      "from": 140,
+      "to": 32
+    },
+    {
+      "from": 140,
+      "to": 128
+    },
+    {
+      "from": 140,
+      "to": 111
+    },
+    {
+      "from": 141,
+      "to": 124
+    },
+    {
+      "from": 141,
+      "to": 123
+    },
+    {
+      "from": 141,
+      "to": 128
+    },
+    {
+      "from": 142,
+      "to": 113
+    },
+    {
+      "from": 142,
+      "to": 115
+    },
+    {
+      "from": 142,
+      "to": 2
+    },
+    {
+      "from": 143,
+      "to": 142
+    },
+    {
+      "from": 144,
+      "to": 142
+    },
+    {
+      "from": 144,
+      "to": 25
+    },
+    {
+      "from": 145,
+      "to": 142
+    },
+    {
+      "from": 145,
+      "to": 124
+    },
+    {
+      "from": 146,
+      "to": 142
+    },
+    {
+      "from": 146,
+      "to": 127
+    },
+    {
+      "from": 147,
+      "to": 146
+    },
+    {
+      "from": 148,
+      "to": 146
+    },
+    {
+      "from": 148,
+      "to": 145
+    },
+    {
+      "from": 149,
+      "to": 143
+    },
+    {
+      "from": 149,
+      "to": 144
+    },
+    {
+      "from": 150,
+      "to": 148
+    },
+    {
+      "from": 150,
+      "to": 149
+    },
+    {
+      "from": 150,
+      "to": 128
+    },
+    {
+      "from": 151,
+      "to": 142
+    },
+    {
+      "from": 151,
+      "to": 114
+    },
+    {
+      "from": 152,
+      "to": 151
+    },
+    {
+      "from": 153,
+      "to": 150
+    },
+    {
+      "from": 154,
+      "to": 117
+    },
+    {
+      "from": 154,
+      "to": 140
+    },
+    {
+      "from": 155,
+      "to": 154
+    },
+    {
+      "from": 156,
+      "to": 155
+    },
+    {
+      "from": 156,
+      "to": 28
+    },
+    {
+      "from": 157,
+      "to": 156
+    },
+    {
+      "from": 157,
+      "to": 158
+    },
+    {
+      "from": 157,
+      "to": 159
+    },
+    {
+      "from": 157,
+      "to": 152
+    },
+    {
+      "from": 158,
+      "to": 25
+    },
+    {
+      "from": 158,
+      "to": 142
+    },
+    {
+      "from": 159,
+      "to": 27
+    },
+    {
+      "from": 159,
+      "to": 151
+    },
+    {
+      "from": 160,
+      "to": 155
+    },
+    {
+      "from": 160,
+      "to": 130
+    },
+    {
+      "from": 160,
+      "to": 131
+    },
+    {
+      "from": 161,
+      "to": 160
+    },
+    {
+      "from": 161,
+      "to": 151
+    },
+    {
+      "from": 162,
+      "to": 160
+    },
+    {
+      "from": 163,
+      "to": 161
+    },
+    {
+      "from": 163,
+      "to": 148
+    },
+    {
+      "from": 164,
+      "to": 163
+    },
+    {
+      "from": 164,
+      "to": 27
+    },
+    {
+      "from": 165,
+      "to": 155
+    },
+    {
+      "from": 165,
+      "to": 134
+    },
+    {
+      "from": 166,
+      "to": 25
+    },
+    {
+      "from": 166,
+      "to": 23
+    },
+    {
+      "from": 167,
+      "to": 166
+    },
+    {
+      "from": 167,
+      "to": 155
+    },
+    {
+      "from": 168,
+      "to": 157
+    },
+    {
+      "from": 168,
+      "to": 160
+    },
+    {
+      "from": 168,
+      "to": 165
+    },
+    {
+      "from": 168,
+      "to": 167
+    },
+    {
+      "from": 169,
+      "to": 77
+    },
+    {
+      "from": 169,
+      "to": 60
+    },
+    {
+      "from": 170,
+      "to": 169
+    },
+    {
+      "from": 171,
+      "to": 170
+    },
+    {
+      "from": 172,
+      "to": 68
+    },
+    {
+      "from": 172,
+      "to": 77
+    },
+    {
+      "from": 173,
+      "to": 170
+    },
+    {
+      "from": 173,
+      "to": 96
+    },
+    {
+      "from": 173,
+      "to": 111
+    },
+    {
+      "from": 174,
+      "to": 111
+    },
+    {
+      "from": 174,
+      "to": 115
+    },
+    {
+      "from": 175,
+      "to": 174
+    },
+    {
+      "from": 175,
+      "to": 115
+    },
+    {
+      "from": 175,
+      "to": 172
+    },
+    {
+      "from": 176,
+      "to": 175
+    },
+    {
+      "from": 176,
+      "to": 173
+    },
+    {
+      "from": 177,
+      "to": 176
+    },
+    {
+      "from": 178,
+      "to": 176
+    },
+    {
+      "from": 178,
+      "to": 116
+    },
+    {
+      "from": 179,
+      "to": 177
+    },
+    {
+      "from": 180,
+      "to": 170
+    },
+    {
+      "from": 180,
+      "to": 120
+    },
+    {
+      "from": 181,
+      "to": 170
+    },
+    {
+      "from": 181,
+      "to": 120
+    },
+    {
+      "from": 182,
+      "to": 170
+    },
+    {
+      "from": 182,
+      "to": 115
+    },
+    {
+      "from": 183,
+      "to": 182
+    },
+    {
+      "from": 183,
+      "to": 176
+    },
+    {
+      "from": 184,
+      "to": 183
+    },
+    {
+      "from": 184,
+      "to": 172
+    },
+    {
+      "from": 185,
+      "to": 183
+    },
+    {
+      "from": 185,
+      "to": 180
+    },
+    {
+      "from": 185,
+      "to": 181
+    },
+    {
+      "from": 186,
+      "to": 175
+    },
+    {
+      "from": 186,
+      "to": 71
+    },
+    {
+      "from": 187,
+      "to": 186
+    },
+    {
+      "from": 187,
+      "to": 176
+    },
+    {
+      "from": 188,
+      "to": 187
+    },
+    {
+      "from": 189,
+      "to": 186
+    },
+    {
+      "from": 189,
+      "to": 75
+    },
+    {
+      "from": 190,
+      "to": 189
+    },
+    {
+      "from": 190,
+      "to": 82
+    },
+    {
+      "from": 191,
+      "to": 71
+    },
+    {
+      "from": 191,
+      "to": 73
+    },
+    {
+      "from": 191,
+      "to": 190
+    },
+    {
+      "from": 192,
+      "to": 191
+    },
+    {
+      "from": 192,
+      "to": 186
+    },
+    {
+      "from": 193,
+      "to": 192
+    },
+    {
+      "from": 193,
+      "to": 174
+    },
+    {
+      "from": 194,
+      "to": 192
+    },
+    {
+      "from": 194,
+      "to": 117
+    },
+    {
+      "from": 195,
+      "to": 194
+    },
+    {
+      "from": 195,
+      "to": 31
+    },
+    {
+      "from": 196,
+      "to": 194
+    },
+    {
+      "from": 196,
+      "to": 180
+    },
+    {
+      "from": 197,
+      "to": 192
+    },
+    {
+      "from": 197,
+      "to": 188
+    },
+    {
+      "from": 199,
+      "to": 198
+    },
+    {
+      "from": 200,
+      "to": 198
+    },
+    {
+      "from": 200,
+      "to": 46
+    },
+    {
+      "from": 201,
+      "to": 198
+    },
+    {
+      "from": 201,
+      "to": 47
+    },
+    {
+      "from": 202,
+      "to": 198
+    },
+    {
+      "from": 202,
+      "to": 48
+    },
+    {
+      "from": 203,
+      "to": 199
+    },
+    {
+      "from": 203,
+      "to": 36
+    },
+    {
+      "from": 204,
+      "to": 203
+    },
+    {
+      "from": 205,
+      "to": 203
+    },
+    {
+      "from": 205,
+      "to": 35
+    },
+    {
+      "from": 206,
+      "to": 205
+    },
+    {
+      "from": 207,
+      "to": 206
+    },
+    {
+      "from": 207,
+      "to": 200
+    },
+    {
+      "from": 208,
+      "to": 206
+    },
+    {
+      "from": 208,
+      "to": 201
+    },
+    {
+      "from": 209,
+      "to": 205
+    },
+    {
+      "from": 209,
+      "to": 47
+    },
+    {
+      "from": 210,
+      "to": 209
+    },
+    {
+      "from": 210,
+      "to": 204
+    },
+    {
+      "from": 211,
+      "to": 210
+    },
+    {
+      "from": 211,
+      "to": 202
+    },
+    {
+      "from": 212,
+      "to": 211
+    },
+    {
+      "from": 213,
+      "to": 212
+    },
+    {
+      "from": 213,
+      "to": 40
+    },
+    {
+      "from": 213,
+      "to": 41
+    },
+    {
+      "from": 214,
+      "to": 211
+    },
+    {
+      "from": 214,
+      "to": 54
+    },
+    {
+      "from": 215,
+      "to": 205
+    },
+    {
+      "from": 215,
+      "to": 46
+    },
+    {
+      "from": 216,
+      "to": 215
+    },
+    {
+      "from": 216,
+      "to": 18
+    },
+    {
+      "from": 217,
+      "to": 215
+    },
+    {
+      "from": 218,
+      "to": 215
+    },
+    {
+      "from": 218,
+      "to": 50
+    },
+    {
+      "from": 218,
+      "to": 56
+    },
+    {
+      "from": 219,
+      "to": 199
+    },
+    {
+      "from": 219,
+      "to": 206
+    },
+    {
+      "from": 220,
+      "to": 219
+    },
+    {
+      "from": 221,
+      "to": 198
+    },
+    {
+      "from": 222,
+      "to": 221
+    },
+    {
+      "from": 223,
+      "to": 19
+    },
+    {
+      "from": 223,
+      "to": 47
+    },
+    {
+      "from": 224,
+      "to": 223
+    },
+    {
+      "from": 224,
+      "to": 222
+    },
+    {
+      "from": 224,
+      "to": 205
+    },
+    {
+      "from": 224,
+      "to": 20
+    },
+    {
+      "from": 225,
+      "to": 223
+    },
+    {
+      "from": 225,
+      "to": 202
+    },
+    {
+      "from": 225,
+      "to": 51
+    },
+    {
+      "from": 226,
+      "to": 221
+    },
+    {
+      "from": 226,
+      "to": 205
+    },
+    {
+      "from": 226,
+      "to": 217
+    },
+    {
+      "from": 227,
+      "to": 205
+    },
+    {
+      "from": 228,
+      "to": 227
+    },
+    {
+      "from": 228,
+      "to": 220
+    },
+    {
+      "from": 229,
+      "to": 228
+    },
+    {
+      "from": 230,
+      "to": 228
+    },
+    {
+      "from": 230,
+      "to": 204
+    },
+    {
+      "from": 231,
+      "to": 227
+    },
+    {
+      "from": 232,
+      "to": 230
+    },
+    {
+      "from": 233,
+      "to": 211
+    },
+    {
+      "from": 233,
+      "to": 56
+    },
+    {
+      "from": 233,
+      "to": 226
+    },
+    {
+      "from": 233,
+      "to": 230
+    },
+    {
+      "from": 234,
+      "to": 216
+    },
+    {
+      "from": 234,
+      "to": 211
+    },
+    {
+      "from": 234,
+      "to": 226
+    },
+    {
+      "from": 235,
+      "to": 234
+    },
+    {
+      "from": 235,
+      "to": 208
+    },
+    {
+      "from": 236,
+      "to": 234
+    },
+    {
+      "from": 236,
+      "to": 213
+    },
+    {
+      "from": 237,
+      "to": 234
+    },
+    {
+      "from": 237,
+      "to": 215
+    },
+    {
+      "from": 238,
+      "to": 237
+    },
+    {
+      "from": 238,
+      "to": 210
+    },
+    {
+      "from": 239,
+      "to": 214
+    },
+    {
+      "from": 239,
+      "to": 218
+    },
+    {
+      "from": 239,
+      "to": 53
+    },
+    {
+      "from": 240,
+      "to": 239
+    },
+    {
+      "from": 241,
+      "to": 240
+    },
+    {
+      "from": 241,
+      "to": 233
+    },
+    {
+      "from": 242,
+      "to": 241
+    },
+    {
+      "from": 243,
+      "to": 242
+    },
+    {
+      "from": 243,
+      "to": 199
+    },
+    {
+      "from": 244,
+      "to": 224
+    },
+    {
+      "from": 244,
+      "to": 23
+    },
+    {
+      "from": 244,
+      "to": 240
+    },
+    {
+      "from": 245,
+      "to": 241
+    },
+    {
+      "from": 245,
+      "to": 234
+    },
+    {
+      "from": 246,
+      "to": 247
+    },
+    {
+      "from": 247,
+      "to": 205
+    },
+    {
+      "from": 247,
+      "to": 38
+    },
+    {
+      "from": 247,
+      "to": 199
+    },
+    {
+      "from": 248,
+      "to": 246
+    },
+    {
+      "from": 249,
+      "to": 250
+    },
+    {
+      "from": 249,
+      "to": 248
+    },
+    {
+      "from": 249,
+      "to": 38
+    },
+    {
+      "from": 250,
+      "to": 19
+    },
+    {
+      "from": 250,
+      "to": 43
+    },
+    {
+      "from": 251,
+      "to": 249
+    },
+    {
+      "from": 252,
+      "to": 249
+    },
+    {
+      "from": 253,
+      "to": 255
+    },
+    {
+      "from": 253,
+      "to": 46
+    },
+    {
+      "from": 253,
+      "to": 19
+    },
+    {
+      "from": 254,
+      "to": 253
+    },
+    {
+      "from": 254,
+      "to": 213
+    },
+    {
+      "from": 255,
+      "to": 246
+    },
+    {
+      "from": 255,
+      "to": 248
+    },
+    {
+      "from": 256,
+      "to": 254
+    },
+    {
+      "from": 257,
+      "to": 254
+    },
+    {
+      "from": 258,
+      "to": 253
+    },
+    {
+      "from": 258,
+      "to": 55
+    },
+    {
+      "from": 258,
+      "to": 223
+    },
+    {
+      "from": 259,
+      "to": 246
+    },
+    {
+      "from": 259,
+      "to": 47
+    },
+    {
+      "from": 260,
+      "to": 259
+    },
+    {
+      "from": 260,
+      "to": 57
+    },
+    {
+      "from": 261,
+      "to": 260
+    },
+    {
+      "from": 261,
+      "to": 52
+    },
+    {
+      "from": 262,
+      "to": 247
+    },
+    {
+      "from": 262,
+      "to": 250
+    },
+    {
+      "from": 263,
+      "to": 262
+    },
+    {
+      "from": 263,
+      "to": 264
+    },
+    {
+      "from": 264,
+      "to": 252
+    },
+    {
+      "from": 265,
+      "to": 264
+    },
+    {
+      "from": 266,
+      "to": 265
+    },
+    {
+      "from": 266,
+      "to": 248
+    },
+    {
+      "from": 267,
+      "to": 266
+    },
+    {
+      "from": 268,
+      "to": 266
+    },
+    {
+      "from": 269,
+      "to": 266
+    },
+    {
+      "from": 270,
+      "to": 269
+    },
+    {
+      "from": 271,
+      "to": 260
+    },
+    {
+      "from": 271,
+      "to": 253
+    },
+    {
+      "from": 271,
+      "to": 266
+    },
+    {
+      "from": 272,
+      "to": 259
+    },
+    {
+      "from": 273,
+      "to": 272
+    },
+    {
+      "from": 273,
+      "to": 19
+    },
+    {
+      "from": 274,
+      "to": 273
+    },
+    {
+      "from": 275,
+      "to": 273
+    },
+    {
+      "from": 276,
+      "to": 274
+    },
+    {
+      "from": 276,
+      "to": 80
+    },
+    {
+      "from": 276,
+      "to": 254
+    },
+    {
+      "from": 277,
+      "to": 274
+    },
+    {
+      "from": 277,
+      "to": 79
+    },
+    {
+      "from": 277,
+      "to": 251
+    },
+    {
+      "from": 278,
+      "to": 273
+    },
+    {
+      "from": 279,
+      "to": 278
+    },
+    {
+      "from": 279,
+      "to": 255
+    },
+    {
+      "from": 280,
+      "to": 259
+    },
+    {
+      "from": 280,
+      "to": 281
+    },
+    {
+      "from": 281,
+      "to": 46
+    },
+    {
+      "from": 281,
+      "to": 205
+    },
+    {
+      "from": 282,
+      "to": 280
+    },
+    {
+      "from": 283,
+      "to": 280
+    },
+    {
+      "from": 284,
+      "to": 280
+    },
+    {
+      "from": 284,
+      "to": 247
+    },
+    {
+      "from": 285,
+      "to": 283
+    },
+    {
+      "from": 285,
+      "to": 275
+    },
+    {
+      "from": 286,
+      "to": 223
+    },
+    {
+      "from": 286,
+      "to": 224
+    },
+    {
+      "from": 287,
+      "to": 253
+    },
+    {
+      "from": 287,
+      "to": 225
+    },
+    {
+      "from": 287,
+      "to": 234
+    },
+    {
+      "from": 288,
+      "to": 287
+    },
+    {
+      "from": 288,
+      "to": 210
+    },
+    {
+      "from": 289,
+      "to": 211
+    },
+    {
+      "from": 289,
+      "to": 260
+    },
+    {
+      "from": 289,
+      "to": 280
+    },
+    {
+      "from": 289,
+      "to": 288
+    },
+    {
+      "from": 289,
+      "to": 253
+    },
+    {
+      "from": 290,
+      "to": 289
+    },
+    {
+      "from": 291,
+      "to": 289
+    },
+    {
+      "from": 291,
+      "to": 214
+    },
+    {
+      "from": 291,
+      "to": 258
+    },
+    {
+      "from": 291,
+      "to": 55
+    },
+    {
+      "from": 291,
+      "to": 54
+    },
+    {
+      "from": 292,
+      "to": 230
+    },
+    {
+      "from": 292,
+      "to": 266
+    },
+    {
+      "from": 292,
+      "to": 224
+    },
+    {
+      "from": 293,
+      "to": 290
+    },
+    {
+      "from": 293,
+      "to": 291
+    },
+    {
+      "from": 294,
+      "to": 291
+    },
+    {
+      "from": 294,
+      "to": 15
+    },
+    {
+      "from": 295,
+      "to": 294
+    },
+    {
+      "from": 295,
+      "to": 292
+    },
+    {
+      "from": 296,
+      "to": 295
+    },
+    {
+      "from": 296,
+      "to": 286
+    },
+    {
+      "from": 297,
+      "to": 296
+    },
+    {
+      "from": 298,
+      "to": 222
+    },
+    {
+      "from": 298,
+      "to": 226
+    },
+    {
+      "from": 299,
+      "to": 233
+    },
+    {
+      "from": 299,
+      "to": 271
+    },
+    {
+      "from": 299,
+      "to": 289
+    },
+    {
+      "from": 299,
+      "to": 298
+    },
+    {
+      "from": 300,
+      "to": 289
+    },
+    {
+      "from": 300,
+      "to": 73
+    },
+    {
+      "from": 301,
+      "to": 9
+    },
+    {
+      "from": 301,
+      "to": 64
+    },
+    {
+      "from": 301,
+      "to": 303
+    },
+    {
+      "from": 302,
+      "to": 300
+    },
+    {
+      "from": 302,
+      "to": 21
+    },
+    {
+      "from": 302,
+      "to": 76
+    },
+    {
+      "from": 303,
+      "to": 289
+    },
+    {
+      "from": 303,
+      "to": 59
+    },
+    {
+      "from": 304,
+      "to": 291
+    },
+    {
+      "from": 304,
+      "to": 61
+    },
+    {
+      "from": 304,
+      "to": 53
+    },
+    {
+      "from": 305,
+      "to": 304
+    },
+    {
+      "from": 305,
+      "to": 295
+    },
+    {
+      "from": 306,
+      "to": 305
+    },
+    {
+      "from": 306,
+      "to": 303
+    },
+    {
+      "from": 307,
+      "to": 306
+    },
+    {
+      "from": 307,
+      "to": 78
+    },
+    {
+      "from": 308,
+      "to": 306
+    },
+    {
+      "from": 308,
+      "to": 24
+    },
+    {
+      "from": 309,
+      "to": 308
+    },
+    {
+      "from": 309,
+      "to": 204
+    },
+    {
+      "from": 309,
+      "to": 248
+    },
+    {
+      "from": 310,
+      "to": 306
+    },
+    {
+      "from": 310,
+      "to": 38
+    },
+    {
+      "from": 311,
+      "to": 306
+    },
+    {
+      "from": 311,
+      "to": 65
+    },
+    {
+      "from": 311,
+      "to": 67
+    },
+    {
+      "from": 312,
+      "to": 311
+    },
+    {
+      "from": 312,
+      "to": 297
+    },
+    {
+      "from": 312,
+      "to": 94
+    },
+    {
+      "from": 313,
+      "to": 311
+    },
+    {
+      "from": 313,
+      "to": 230
+    },
+    {
+      "from": 314,
+      "to": 312
+    },
+    {
+      "from": 314,
+      "to": 102
+    },
+    {
+      "from": 315,
+      "to": 312
+    },
+    {
+      "from": 315,
+      "to": 102
+    },
+    {
+      "from": 316,
+      "to": 314
+    },
+    {
+      "from": 316,
+      "to": 315
+    },
+    {
+      "from": 316,
+      "to": 98
+    },
+    {
+      "from": 317,
+      "to": 312
+    },
+    {
+      "from": 317,
+      "to": 103
+    },
+    {
+      "from": 318,
+      "to": 315
+    },
+    {
+      "from": 318,
+      "to": 317
+    },
+    {
+      "from": 319,
+      "to": 318
+    },
+    {
+      "from": 320,
+      "to": 318
+    },
+    {
+      "from": 320,
+      "to": 222
+    },
+    {
+      "from": 321,
+      "to": 320
+    },
+    {
+      "from": 321,
+      "to": 86
+    },
+    {
+      "from": 322,
+      "to": 312
+    },
+    {
+      "from": 322,
+      "to": 107
+    },
+    {
+      "from": 323,
+      "to": 306
+    },
+    {
+      "from": 323,
+      "to": 13
+    },
+    {
+      "from": 324,
+      "to": 323
+    },
+    {
+      "from": 325,
+      "to": 323
+    },
+    {
+      "from": 326,
+      "to": 324
+    },
+    {
+      "from": 326,
+      "to": 325
+    },
+    {
+      "from": 327,
+      "to": 325
+    },
+    {
+      "from": 327,
+      "to": 310
+    },
+    {
+      "from": 328,
+      "to": 306
+    },
+    {
+      "from": 328,
+      "to": 38
+    },
+    {
+      "from": 328,
+      "to": 255
+    },
+    {
+      "from": 329,
+      "to": 328
+    },
+    {
+      "from": 329,
+      "to": 238
+    },
+    {
+      "from": 329,
+      "to": 279
+    },
+    {
+      "from": 329,
+      "to": 54
+    },
+    {
+      "from": 330,
+      "to": 328
+    },
+    {
+      "from": 331,
+      "to": 330
+    },
+    {
+      "from": 331,
+      "to": 30
+    },
+    {
+      "from": 331,
+      "to": 308
+    },
+    {
+      "from": 332,
+      "to": 238
+    },
+    {
+      "from": 332,
+      "to": 279
+    },
+    {
+      "from": 332,
+      "to": 306
+    },
+    {
+      "from": 333,
+      "to": 299
+    },
+    {
+      "from": 334,
+      "to": 333
+    },
+    {
+      "from": 334,
+      "to": 306
+    },
+    {
+      "from": 335,
+      "to": 334
+    },
+    {
+      "from": 335,
+      "to": 308
+    },
+    {
+      "from": 336,
+      "to": 335
+    },
+    {
+      "from": 337,
+      "to": 335
+    },
+    {
+      "from": 337,
+      "to": 298
+    },
+    {
+      "from": 338,
+      "to": 337
+    },
+    {
+      "from": 338,
+      "to": 70
+    },
+    {
+      "from": 339,
+      "to": 308
+    },
+    {
+      "from": 339,
+      "to": 334
+    },
+    {
+      "from": 340,
+      "to": 339
+    },
+    {
+      "from": 340,
+      "to": 128
+    },
+    {
+      "from": 340,
+      "to": 335
+    },
+    {
+      "from": 341,
+      "to": 340
+    },
+    {
+      "from": 341,
+      "to": 165
+    },
+    {
+      "from": 342,
+      "to": 334
+    },
+    {
+      "from": 342,
+      "to": 310
+    },
+    {
+      "from": 343,
+      "to": 342
+    },
+    {
+      "from": 344,
+      "to": 342
+    },
+    {
+      "from": 345,
+      "to": 344
+    },
+    {
+      "from": 346,
+      "to": 344
+    },
+    {
+      "from": 346,
+      "to": 313
+    },
+    {
+      "from": 347,
+      "to": 343
+    },
+    {
+      "from": 347,
+      "to": 324
+    },
+    {
+      "from": 348,
+      "to": 343
+    },
+    {
+      "from": 348,
+      "to": 324
+    },
+    {
+      "from": 349,
+      "to": 347
+    },
+    {
+      "from": 349,
+      "to": 348
+    },
+    {
+      "from": 349,
+      "to": 346
+    },
+    {
+      "from": 349,
+      "to": 335
+    },
+    {
+      "from": 350,
+      "to": 349
+    },
+    {
+      "from": 350,
+      "to": 331
+    },
+    {
+      "from": 351,
+      "to": 350
+    },
+    {
+      "from": 351,
+      "to": 336
+    },
+    {
+      "from": 352,
+      "to": 346
+    },
+    {
+      "from": 353,
+      "to": 352
+    },
+    {
+      "from": 354,
+      "to": 353
+    },
+    {
+      "from": 355,
+      "to": 349
+    },
+    {
+      "from": 355,
+      "to": 348
+    },
+    {
+      "from": 356,
+      "to": 357
+    },
+    {
+      "from": 357,
+      "to": 306
+    },
+    {
+      "from": 357,
+      "to": 299
+    },
+    {
+      "from": 358,
+      "to": 356
+    },
+    {
+      "from": 358,
+      "to": 39
+    },
+    {
+      "from": 359,
+      "to": 358
+    },
+    {
+      "from": 359,
+      "to": 298
+    },
+    {
+      "from": 360,
+      "to": 359
+    },
+    {
+      "from": 360,
+      "to": 305
+    },
+    {
+      "from": 361,
+      "to": 359
+    },
+    {
+      "from": 361,
+      "to": 305
+    },
+    {
+      "from": 362,
+      "to": 360
+    },
+    {
+      "from": 362,
+      "to": 361
+    },
+    {
+      "from": 363,
+      "to": 362
+    },
+    {
+      "from": 364,
+      "to": 363
+    },
+    {
+      "from": 364,
+      "to": 64
+    },
+    {
+      "from": 365,
+      "to": 363
+    },
+    {
+      "from": 366,
+      "to": 365
+    },
+    {
+      "from": 366,
+      "to": 360
+    },
+    {
+      "from": 367,
+      "to": 363
+    },
+    {
+      "from": 367,
+      "to": 64
+    },
+    {
+      "from": 368,
+      "to": 367
+    },
+    {
+      "from": 368,
+      "to": 65
+    },
+    {
+      "from": 369,
+      "to": 368
+    },
+    {
+      "from": 369,
+      "to": 108
+    },
+    {
+      "from": 370,
+      "to": 360
+    },
+    {
+      "from": 370,
+      "to": 361
+    },
+    {
+      "from": 370,
+      "to": 339
+    },
+    {
+      "from": 371,
+      "to": 363
+    },
+    {
+      "from": 371,
+      "to": 354
+    },
+    {
+      "from": 372,
+      "to": 365
+    },
+    {
+      "from": 372,
+      "to": 363
+    },
+    {
+      "from": 373,
+      "to": 366
+    },
+    {
+      "from": 373,
+      "to": 331
+    },
+    {
+      "from": 374,
+      "to": 373
+    },
+    {
+      "from": 374,
+      "to": 320
+    },
+    {
+      "from": 375,
+      "to": 374
+    },
+    {
+      "from": 375,
+      "to": 372
+    },
+    {
+      "from": 375,
+      "to": 80
+    },
+    {
+      "from": 375,
+      "to": 78
+    },
+    {
+      "from": 376,
+      "to": 303
+    },
+    {
+      "from": 376,
+      "to": 77
+    },
+    {
+      "from": 377,
+      "to": 376
+    },
+    {
+      "from": 377,
+      "to": 289
+    },
+    {
+      "from": 378,
+      "to": 377
+    },
+    {
+      "from": 378,
+      "to": 250
+    },
+    {
+      "from": 378,
+      "to": 41
+    },
+    {
+      "from": 379,
+      "to": 378
+    },
+    {
+      "from": 380,
+      "to": 378
+    },
+    {
+      "from": 381,
+      "to": 380
+    },
+    {
+      "from": 382,
+      "to": 380
+    },
+    {
+      "from": 382,
+      "to": 331
+    },
+    {
+      "from": 383,
+      "to": 382
+    },
+    {
+      "from": 383,
+      "to": 47
+    },
+    {
+      "from": 384,
+      "to": 383
+    },
+    {
+      "from": 384,
+      "to": 23
+    },
+    {
+      "from": 385,
+      "to": 382
+    },
+    {
+      "from": 385,
+      "to": 383
+    },
+    {
+      "from": 386,
+      "to": 384
+    },
+    {
+      "from": 387,
+      "to": 385
+    },
+    {
+      "from": 387,
+      "to": 386
+    },
+    {
+      "from": 388,
+      "to": 381
+    },
+    {
+      "from": 389,
+      "to": 378
+    },
+    {
+      "from": 389,
+      "to": 384
+    },
+    {
+      "from": 390,
+      "to": 387
+    },
+    {
+      "from": 391,
+      "to": 387
+    },
+    {
+      "from": 391,
+      "to": 390
+    },
+    {
+      "from": 392,
+      "to": 391
+    },
+    {
+      "from": 392,
+      "to": 387
+    },
+    {
+      "from": 392,
+      "to": 16
+    }
+  ]
+}

@@ -1,0 +1,2760 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="An interactive intelligent textbook for junior electrical engineers that builds from transmission lines and the Smith chart to Maxwell's equations, plane waves, waveguides and antennas.">
+      
+      
+        <meta name="author" content="Hye Yoon Park">
+      
+      
+        <link rel="canonical" href="https://shirhyp.github.io/electromagnetics/learning-graph/taxonomy-distribution/">
+      
+      
+        <link rel="prev" href="../concept-taxonomy/">
+      
+      
+        <link rel="next" href="../../sims/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Taxonomy Distribution - Transmission Lines, Fields, and Waves</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../css/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="amber">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#taxonomy-distribution-report" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Transmission Lines, Fields, and Waves" class="md-header__button md-logo" aria-label="Transmission Lines, Fields, and Waves" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Transmission Lines, Fields, and Waves
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Taxonomy Distribution
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/shirhyp/electromagnetics" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub Repo
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Transmission Lines, Fields, and Waves" class="md-nav__button md-logo" aria-label="Transmission Lines, Fields, and Waves" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Transmission Lines, Fields, and Waves
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/shirhyp/electromagnetics" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub Repo
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../course-description/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Course Description
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../chapters/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapters
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Learning Graph
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Learning Graph
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../course-description-assessment/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Course Description Assessment
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../concept-list/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Concept Enumeration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../quality-metrics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Graph Quality Analysis
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../concept-taxonomy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Concept Taxonomy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Taxonomy Distribution
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Taxonomy Distribution
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overview
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#distribution-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Distribution Summary
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#visual-distribution" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Visual Distribution
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#balance-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Balance Analysis
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Balance Analysis">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#no-over-represented-categories" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ✅ No Over-Represented Categories
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#category-details" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Category Details
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Category Details">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#electrostatics-estat" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Electrostatics (ESTAT)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#magnetostatics-mstat" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Magnetostatics (MSTAT)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#math-and-circuit-foundations-found" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Math and Circuit Foundations (FOUND)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#transmission-line-theory-tline" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Transmission Line Theory (TLINE)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#terminated-transmission-lines-term" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Terminated Transmission Lines (TERM)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#uniform-plane-waves-plane" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Uniform Plane Waves (PLANE)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#transients-and-signal-integrity-trans" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Transients and Signal Integrity (TRANS)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#smith-chart-and-impedance-matching-smith" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Smith Chart and Impedance Matching (SMITH)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vector-analysis-vec" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Vector Analysis (VEC)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#maxwells-equations-maxw" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Maxwell's Equations (MAXW)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reflection-and-transmission-refl" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reflection and Transmission (REFL)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#waveguides-wguid" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Waveguides (WGUID)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wave-fundamentals-wave" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Wave Fundamentals (WAVE)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#antennas-ant" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Antennas (ANT)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recommendations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Recommendations
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Recommendations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#educational-use-recommendations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Educational Use Recommendations
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../sims/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MicroSims
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../license/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    License
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contact/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Contact
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overview
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#distribution-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Distribution Summary
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#visual-distribution" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Visual Distribution
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#balance-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Balance Analysis
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Balance Analysis">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#no-over-represented-categories" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ✅ No Over-Represented Categories
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#category-details" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Category Details
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Category Details">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#electrostatics-estat" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Electrostatics (ESTAT)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#magnetostatics-mstat" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Magnetostatics (MSTAT)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#math-and-circuit-foundations-found" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Math and Circuit Foundations (FOUND)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#transmission-line-theory-tline" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Transmission Line Theory (TLINE)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#terminated-transmission-lines-term" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Terminated Transmission Lines (TERM)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#uniform-plane-waves-plane" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Uniform Plane Waves (PLANE)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#transients-and-signal-integrity-trans" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Transients and Signal Integrity (TRANS)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#smith-chart-and-impedance-matching-smith" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Smith Chart and Impedance Matching (SMITH)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vector-analysis-vec" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Vector Analysis (VEC)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#maxwells-equations-maxw" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Maxwell's Equations (MAXW)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reflection-and-transmission-refl" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reflection and Transmission (REFL)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#waveguides-wguid" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Waveguides (WGUID)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wave-fundamentals-wave" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Wave Fundamentals (WAVE)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#antennas-ant" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Antennas (ANT)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recommendations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Recommendations
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Recommendations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#educational-use-recommendations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Educational Use Recommendations
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+  
+
+
+  <nav class="md-path" aria-label="Navigation" >
+    <ol class="md-path__list">
+      
+        
+  
+  
+    <li class="md-path__item">
+      <a href="../.." class="md-path__link">
+        
+  <span class="md-ellipsis">
+    Home
+  </span>
+
+      </a>
+    </li>
+  
+
+      
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    Learning Graph
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ol>
+  </nav>
+
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+    <a href="https://github.com/shirhyp/electromagnetics/blob/main/docs/learning-graph/taxonomy-distribution.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
+  
+  
+
+
+<h1 id="taxonomy-distribution-report">Taxonomy Distribution Report<a class="headerlink" href="#taxonomy-distribution-report" title="Permanent link">&para;</a></h1>
+<h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Total Concepts</strong>: 392</li>
+<li><strong>Number of Taxonomies</strong>: 14</li>
+<li><strong>Average Concepts per Taxonomy</strong>: 28.0</li>
+</ul>
+<h2 id="distribution-summary">Distribution Summary<a class="headerlink" href="#distribution-summary" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Category</th>
+<th>TaxonomyID</th>
+<th>Count</th>
+<th>Percentage</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Electrostatics</td>
+<td>ESTAT</td>
+<td>48</td>
+<td>12.2%</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>Magnetostatics</td>
+<td>MSTAT</td>
+<td>34</td>
+<td>8.7%</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>Math and Circuit Foundations</td>
+<td>FOUND</td>
+<td>33</td>
+<td>8.4%</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>Transmission Line Theory</td>
+<td>TLINE</td>
+<td>33</td>
+<td>8.4%</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>Terminated Transmission Lines</td>
+<td>TERM</td>
+<td>32</td>
+<td>8.2%</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>Uniform Plane Waves</td>
+<td>PLANE</td>
+<td>30</td>
+<td>7.7%</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>Transients and Signal Integrity</td>
+<td>TRANS</td>
+<td>29</td>
+<td>7.4%</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>Smith Chart and Impedance Matching</td>
+<td>SMITH</td>
+<td>27</td>
+<td>6.9%</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>Vector Analysis</td>
+<td>VEC</td>
+<td>25</td>
+<td>6.4%</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>Maxwell's Equations</td>
+<td>MAXW</td>
+<td>23</td>
+<td>5.9%</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>Reflection and Transmission</td>
+<td>REFL</td>
+<td>23</td>
+<td>5.9%</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>Waveguides</td>
+<td>WGUID</td>
+<td>20</td>
+<td>5.1%</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>Wave Fundamentals</td>
+<td>WAVE</td>
+<td>18</td>
+<td>4.6%</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>Antennas</td>
+<td>ANT</td>
+<td>17</td>
+<td>4.3%</td>
+<td>✅</td>
+</tr>
+</tbody>
+</table>
+<h2 id="visual-distribution">Visual Distribution<a class="headerlink" href="#visual-distribution" title="Permanent link">&para;</a></h2>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Electrostatics            ██████  48 ( 12.2%)
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>Magnetostatics            ████  34 (  8.7%)
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>Math and Circuit Foundati ████  33 (  8.4%)
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>Transmission Line Theory  ████  33 (  8.4%)
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>Terminated Transmission L ████  32 (  8.2%)
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>Uniform Plane Waves       ███  30 (  7.7%)
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>Transients and Signal Int ███  29 (  7.4%)
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>Smith Chart and Impedance ███  27 (  6.9%)
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>Vector Analysis           ███  25 (  6.4%)
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>Maxwell's Equations       ██  23 (  5.9%)
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>Reflection and Transmissi ██  23 (  5.9%)
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>Waveguides                ██  20 (  5.1%)
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>Wave Fundamentals         ██  18 (  4.6%)
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>Antennas                  ██  17 (  4.3%)
+</span></code></pre></div>
+<h2 id="balance-analysis">Balance Analysis<a class="headerlink" href="#balance-analysis" title="Permanent link">&para;</a></h2>
+<h3 id="no-over-represented-categories">✅ No Over-Represented Categories<a class="headerlink" href="#no-over-represented-categories" title="Permanent link">&para;</a></h3>
+<p>All categories are under the 30% threshold. Good balance!</p>
+<h2 id="category-details">Category Details<a class="headerlink" href="#category-details" title="Permanent link">&para;</a></h2>
+<h3 id="electrostatics-estat">Electrostatics (ESTAT)<a class="headerlink" href="#electrostatics-estat" title="Permanent link">&para;</a></h3>
+<p><strong>Count</strong>: 48 concepts (12.2%)</p>
+<p><strong>Concepts</strong>:</p>
+<ul>
+<li>
+<ol>
+<li>Electric Charge</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Point Charge</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Line Charge Density</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Surface Charge Density</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Volume Charge Density</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Coulomb's Law</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Permittivity of Free Space</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Electric Field Intensity</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Superposition Principle</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Field of a Line Charge</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Field of a Charged Sheet</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Electric Flux</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Electric Flux Density</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Gauss's Law</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Gaussian Surface</li>
+</ol>
+</li>
+<li><em>...and 33 more</em></li>
+</ul>
+<h3 id="magnetostatics-mstat">Magnetostatics (MSTAT)<a class="headerlink" href="#magnetostatics-mstat" title="Permanent link">&para;</a></h3>
+<p><strong>Count</strong>: 34 concepts (8.7%)</p>
+<p><strong>Concepts</strong>:</p>
+<ul>
+<li>
+<ol>
+<li>Magnetic Flux Density</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Lorentz Force</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Permeability of Free Space</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Biot-Savart Law</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Current Element</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Field of a Straight Wire</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Field of a Current Loop</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Ampere's Circuital Law</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Amperian Loop</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Magnetic Field Intensity</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Field of a Solenoid</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Field of a Toroid</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Ampere's Law Differential Form</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Magnetic Flux</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Gauss's Law for Magnetism</li>
+</ol>
+</li>
+<li><em>...and 19 more</em></li>
+</ul>
+<h3 id="math-and-circuit-foundations-found">Math and Circuit Foundations (FOUND)<a class="headerlink" href="#math-and-circuit-foundations-found" title="Permanent link">&para;</a></h3>
+<p><strong>Count</strong>: 33 concepts (8.4%)</p>
+<p><strong>Concepts</strong>:</p>
+<ul>
+<li>
+<ol>
+<li>Complex Number</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Complex Plane</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Rectangular Form</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Polar Form</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Euler's Formula</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Complex Conjugate</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Sinusoidal Signal</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Amplitude</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Frequency</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Angular Frequency</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Period</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Phase Angle</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Phasor</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Phasor Transformation</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Time-Harmonic Signal</li>
+</ol>
+</li>
+<li><em>...and 18 more</em></li>
+</ul>
+<h3 id="transmission-line-theory-tline">Transmission Line Theory (TLINE)<a class="headerlink" href="#transmission-line-theory-tline" title="Permanent link">&para;</a></h3>
+<p><strong>Count</strong>: 33 concepts (8.4%)</p>
+<p><strong>Concepts</strong>:</p>
+<ul>
+<li>
+<ol>
+<li>Transmission Line</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>TEM Mode</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Two-Wire Line</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Coaxial Line</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Parallel-Plate Line</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Microstrip Line</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Stripline</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Coplanar Waveguide</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Distributed Element Model</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Per-Unit-Length Resistance</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Per-Unit-Length Inductance</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Per-Unit-Length Capacitance</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Per-Unit-Length Conductance</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Line Segment Equivalent Circuit</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Telegrapher's Equations</li>
+</ol>
+</li>
+<li><em>...and 18 more</em></li>
+</ul>
+<h3 id="terminated-transmission-lines-term">Terminated Transmission Lines (TERM)<a class="headerlink" href="#terminated-transmission-lines-term" title="Permanent link">&para;</a></h3>
+<p><strong>Count</strong>: 32 concepts (8.2%)</p>
+<p><strong>Concepts</strong>:</p>
+<ul>
+<li>
+<ol>
+<li>Load Impedance</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Source Impedance</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Terminated Line</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Normalized Impedance</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Normalized Admittance</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Voltage Reflection Coefficient</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Current Reflection Coefficient</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Matched Load</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Short-Circuit Termination</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Open-Circuit Termination</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Reactive Termination</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Standing Wave Pattern</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Voltage Maximum</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Voltage Minimum</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>VSWR</li>
+</ol>
+</li>
+<li><em>...and 17 more</em></li>
+</ul>
+<h3 id="uniform-plane-waves-plane">Uniform Plane Waves (PLANE)<a class="headerlink" href="#uniform-plane-waves-plane" title="Permanent link">&para;</a></h3>
+<p><strong>Count</strong>: 30 concepts (7.7%)</p>
+<p><strong>Concepts</strong>:</p>
+<ul>
+<li>
+<ol>
+<li>Electromagnetic Wave</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Vector Wave Equation</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Helmholtz Equation</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Uniform Plane Wave</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>TEM Wave</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Intrinsic Impedance</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Impedance of Free Space</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Propagation Direction</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Plane Wave in Lossless Medium</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Plane Wave in Lossy Medium</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Index of Refraction</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Good Dielectric</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Good Conductor</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Low-Loss Approximation Validity</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Plane Wave Attenuation</li>
+</ol>
+</li>
+<li><em>...and 15 more</em></li>
+</ul>
+<h3 id="transients-and-signal-integrity-trans">Transients and Signal Integrity (TRANS)<a class="headerlink" href="#transients-and-signal-integrity-trans" title="Permanent link">&para;</a></h3>
+<p><strong>Count</strong>: 29 concepts (7.4%)</p>
+<p><strong>Concepts</strong>:</p>
+<ul>
+<li>
+<ol>
+<li>Transient Response</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Step Response</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Pulse Response</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Transit Time</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Initial Wave Amplitude</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Source Reflection Coefficient</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Multiple Reflections</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Bounce Diagram</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Voltage Bounce Diagram</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Current Bounce Diagram</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Steady-State Line Voltage</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Capacitive Load Transient</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Inductive Load Transient</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Time-Domain Reflectometry</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>TDR Trace Interpretation</li>
+</ol>
+</li>
+<li><em>...and 14 more</em></li>
+</ul>
+<h3 id="smith-chart-and-impedance-matching-smith">Smith Chart and Impedance Matching (SMITH)<a class="headerlink" href="#smith-chart-and-impedance-matching-smith" title="Permanent link">&para;</a></h3>
+<p><strong>Count</strong>: 27 concepts (6.9%)</p>
+<p><strong>Concepts</strong>:</p>
+<ul>
+<li>
+<ol>
+<li>Smith Chart</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Constant-Resistance Circle</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Constant-Reactance Arc</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Constant-VSWR Circle</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Wavelengths Toward Generator</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Wavelengths Toward Load</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Smith Chart Rotation</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Reading Impedance on the Chart</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Graphical Input Impedance</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Admittance Smith Chart</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Impedance-Admittance Chart</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Smith Chart Software Tool</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Impedance Matching</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Matching Network</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Lumped-Element Matching</li>
+</ol>
+</li>
+<li><em>...and 12 more</em></li>
+</ul>
+<h3 id="vector-analysis-vec">Vector Analysis (VEC)<a class="headerlink" href="#vector-analysis-vec" title="Permanent link">&para;</a></h3>
+<p><strong>Count</strong>: 25 concepts (6.4%)</p>
+<p><strong>Concepts</strong>:</p>
+<ul>
+<li>
+<ol>
+<li>Scalar Field</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Vector Field</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Unit Vector</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Dot Product</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Cross Product</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Cartesian Coordinates</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Cylindrical Coordinates</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Spherical Coordinates</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Coordinate Transformation</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Differential Length</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Differential Area</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Differential Volume</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Line Integral</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Surface Integral</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Volume Integral</li>
+</ol>
+</li>
+<li><em>...and 10 more</em></li>
+</ul>
+<h3 id="maxwells-equations-maxw">Maxwell's Equations (MAXW)<a class="headerlink" href="#maxwells-equations-maxw" title="Permanent link">&para;</a></h3>
+<p><strong>Count</strong>: 23 concepts (5.9%)</p>
+<p><strong>Concepts</strong>:</p>
+<ul>
+<li>
+<ol>
+<li>Faraday's Law</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Electromotive Force</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Lenz's Law</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Transformer EMF</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Motional EMF</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Ideal Transformer</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Conduction Current</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Displacement Current</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Displacement Current Density</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Maxwell's Equations</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Integral Form of Maxwell's Eqs</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Point Form of Maxwell's Eqs</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Constitutive Relations</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Meaning of Maxwell's Equations</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Time-Harmonic Fields</li>
+</ol>
+</li>
+<li><em>...and 8 more</em></li>
+</ul>
+<h3 id="reflection-and-transmission-refl">Reflection and Transmission (REFL)<a class="headerlink" href="#reflection-and-transmission-refl" title="Permanent link">&para;</a></h3>
+<p><strong>Count</strong>: 23 concepts (5.9%)</p>
+<p><strong>Concepts</strong>:</p>
+<ul>
+<li>
+<ol>
+<li>Planar Boundary</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Normal Incidence</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Plane Wave Reflection Coeff</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Plane Wave Transmission Coeff</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Reflection from a Conductor</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Standing Wave in Free Space</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Wave Impedance</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Transmission Line Analogy</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Quarter-Wave Coating</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Oblique Incidence</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Plane of Incidence</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Angle of Incidence</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Snell's Law of Reflection</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Snell's Law of Refraction</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Perpendicular Polarization</li>
+</ol>
+</li>
+<li><em>...and 8 more</em></li>
+</ul>
+<h3 id="waveguides-wguid">Waveguides (WGUID)<a class="headerlink" href="#waveguides-wguid" title="Permanent link">&para;</a></h3>
+<p><strong>Count</strong>: 20 concepts (5.1%)</p>
+<p><strong>Concepts</strong>:</p>
+<ul>
+<li>
+<ol>
+<li>Waveguide</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Guided Wave</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Rectangular Waveguide</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Waveguide Boundary Conditions</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>TE Mode</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>TM Mode</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Mode Indices</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Cutoff Frequency</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Cutoff Wavelength</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Dominant Mode</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>TE10 Mode</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Guide Wavelength</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Waveguide Phase Velocity</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Waveguide Group Velocity</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Waveguide Wave Impedance</li>
+</ol>
+</li>
+<li><em>...and 5 more</em></li>
+</ul>
+<h3 id="wave-fundamentals-wave">Wave Fundamentals (WAVE)<a class="headerlink" href="#wave-fundamentals-wave" title="Permanent link">&para;</a></h3>
+<p><strong>Count</strong>: 18 concepts (4.6%)</p>
+<p><strong>Concepts</strong>:</p>
+<ul>
+<li>
+<ol>
+<li>Wave</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Traveling Wave</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Wave Equation</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Forward Traveling Wave</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Backward Traveling Wave</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Wavelength</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Phase Velocity</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Phase Constant</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Speed of Light</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Propagation Delay</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Superposition of Waves</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Standing Wave</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Rise Time</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Signal Bandwidth</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Electrical Length</li>
+</ol>
+</li>
+<li><em>...and 3 more</em></li>
+</ul>
+<h3 id="antennas-ant">Antennas (ANT)<a class="headerlink" href="#antennas-ant" title="Permanent link">&para;</a></h3>
+<p><strong>Count</strong>: 17 concepts (4.3%)</p>
+<p><strong>Concepts</strong>:</p>
+<ul>
+<li>
+<ol>
+<li>Antenna</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Radiation</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Hertzian Dipole</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Near Field</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Far Field</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Radiation Pattern</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Radiation Intensity</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Radiated Power</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Radiation Resistance</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Directivity</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Antenna Efficiency</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Antenna Gain</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Beamwidth</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Half-Wave Dipole</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Antenna Reciprocity</li>
+</ol>
+</li>
+<li><em>...and 2 more</em></li>
+</ul>
+<h2 id="recommendations">Recommendations<a class="headerlink" href="#recommendations" title="Permanent link">&para;</a></h2>
+<ul>
+<li>✅ <strong>Excellent balance</strong>: Categories are evenly distributed (spread: 7.9%)</li>
+<li>✅ <strong>MISC category minimal</strong>: Good categorization specificity</li>
+</ul>
+<h3 id="educational-use-recommendations">Educational Use Recommendations<a class="headerlink" href="#educational-use-recommendations" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Use taxonomy categories for color-coding in graph visualizations</li>
+<li>Design curriculum modules based on taxonomy groupings</li>
+<li>Create filtered views for focused learning paths</li>
+<li>Use categories for assessment organization</li>
+<li>Enable navigation by topic area in interactive tools</li>
+</ul>
+<hr />
+<p><em>Report generated by learning-graph-reports/taxonomy_distribution.py</em></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../concept-taxonomy/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Concept Taxonomy">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Concept Taxonomy
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../../sims/" class="md-footer__link md-footer__link--next" aria-label="Next: List of MicroSims">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                List of MicroSims
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2026 Hye Yoon Park. Licensed under <a href="license/">CC BY-NC-SA 4.0</a> for non-commercial use.
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["content.code.copy", "content.action.edit", "navigation.expand", "navigation.path", "navigation.prune", "navigation.indexes", "navigation.top", "navigation.footer", "toc.follow", "search.suggest", "search.highlight", "search.share"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>
