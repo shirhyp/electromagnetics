@@ -1,0 +1,16 @@
+{
+  "FOUND": "Math and Circuit Foundations",
+  "VEC": "Vector Analysis",
+  "WAVE": "Wave Fundamentals",
+  "TLINE": "Transmission Line Theory",
+  "TERM": "Terminated Transmission Lines",
+  "SMITH": "Smith Chart and Impedance Matching",
+  "TRANS": "Transients and Signal Integrity",
+  "ESTAT": "Electrostatics",
+  "MSTAT": "Magnetostatics",
+  "MAXW": "Maxwell's Equations",
+  "PLANE": "Uniform Plane Waves",
+  "REFL": "Reflection and Transmission",
+  "WGUID": "Waveguides",
+  "ANT": "Antennas"
+}
